@@ -26,6 +26,7 @@
 		5D8483B82166416F00F52705 /* GetDataForRelated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8483B72166416F00F52705 /* GetDataForRelated.swift */; };
 		5D90D999216F680900209A9B /* GameDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90D998216F680900209A9B /* GameDetails.swift */; };
 		5DA087F921733B8F00AA2319 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA087F821733B8F00AA2319 /* Reachability.swift */; };
+		5DAC77272174CA9900A62C3D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC77262174CA9900A62C3D /* SignInVC.swift */; };
 		5DB372FB216253CC005BD903 /* ezibaziOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB372FA216253CC005BD903 /* ezibaziOrange.swift */; };
 		5DBBFBE3214A99580037BFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBBFBE2214A99580037BFF6 /* AppDelegate.swift */; };
 		5DBBFBE5214A99580037BFF6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBBFBE4214A99580037BFF6 /* HomeViewController.swift */; };
@@ -41,12 +42,10 @@
 		5DFB6EE6215CE5E400CE384E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB6EE5215CE5E400CE384E /* Game.swift */; };
 		5DFB6EE8215CE89000CE384E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFB6EE7215CE89000CE384E /* Photo.swift */; };
 		5DFD8A7A216DDCC100BF6995 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD8A79216DDCC100BF6995 /* PostCell.swift */; };
-		94082133EC16A7BABD021D04 /* Pods_EziBazi2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457686B2C89E60BC3B22AE50 /* Pods_EziBazi2.framework */; };
+		DBC5D6ABE1447F56B1ACC850 /* Pods_EziBazi2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CD0634A2CE68DCACB34D31 /* Pods_EziBazi2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F1ECFDA21FBC151B8B1E543 /* Pods-EziBazi2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EziBazi2.release.xcconfig"; path = "Pods/Target Support Files/Pods-EziBazi2/Pods-EziBazi2.release.xcconfig"; sourceTree = "<group>"; };
-		457686B2C89E60BC3B22AE50 /* Pods_EziBazi2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EziBazi2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1BDD04215B8D96006741CF /* RentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentViewController.swift; sourceTree = "<group>"; };
 		5D1BDD07215B8E01006741CF /* RentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentTableViewCell.swift; sourceTree = "<group>"; };
 		5D2A81782171F1B3006D2D24 /* GameDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsCell.swift; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		5D8483B72166416F00F52705 /* GetDataForRelated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataForRelated.swift; sourceTree = "<group>"; };
 		5D90D998216F680900209A9B /* GameDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetails.swift; sourceTree = "<group>"; };
 		5DA087F821733B8F00AA2319 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		5DAC77262174CA9900A62C3D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		5DB372FA216253CC005BD903 /* ezibaziOrange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ezibaziOrange.swift; sourceTree = "<group>"; };
 		5DBBFBDF214A99580037BFF6 /* EziBazi2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EziBazi2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBBFBE2214A99580037BFF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +83,9 @@
 		5DFB6EE5215CE5E400CE384E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		5DFB6EE7215CE89000CE384E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		5DFD8A79216DDCC100BF6995 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
-		DCE551E4CA10004F0CE24879 /* Pods-EziBazi2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EziBazi2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EziBazi2/Pods-EziBazi2.debug.xcconfig"; sourceTree = "<group>"; };
+		82CD0634A2CE68DCACB34D31 /* Pods_EziBazi2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EziBazi2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7EF73BBFA9B6EF4F4E69978 /* Pods-EziBazi2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EziBazi2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EziBazi2/Pods-EziBazi2.debug.xcconfig"; sourceTree = "<group>"; };
+		DE0D4778AE5A1CF06A3B4B98 /* Pods-EziBazi2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EziBazi2.release.xcconfig"; path = "Pods/Target Support Files/Pods-EziBazi2/Pods-EziBazi2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,21 +93,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94082133EC16A7BABD021D04 /* Pods_EziBazi2.framework in Frameworks */,
+				DBC5D6ABE1447F56B1ACC850 /* Pods_EziBazi2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0926D0232AE78B283756478F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				457686B2C89E60BC3B22AE50 /* Pods_EziBazi2.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		5D12D371214E5A4400804F12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +139,7 @@
 				5DF15B44215BB41000484A77 /* SaleViewController.swift */,
 				5DEA75782162652C0063274E /* SearchViewController.swift */,
 				5D90D998216F680900209A9B /* GameDetails.swift */,
+				5DAC77262174CA9900A62C3D /* SignInVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,8 +166,8 @@
 			children = (
 				5DBBFBE1214A99580037BFF6 /* EziBazi2 */,
 				5DBBFBE0214A99580037BFF6 /* Products */,
-				E233A56B9A8E696D8FAAABB0 /* Pods */,
-				0926D0232AE78B283756478F /* Frameworks */,
+				7E86CC18CB032F8451824473 /* Pods */,
+				EBBCABDB11B95D66616938F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,13 +201,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		E233A56B9A8E696D8FAAABB0 /* Pods */ = {
+		7E86CC18CB032F8451824473 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DCE551E4CA10004F0CE24879 /* Pods-EziBazi2.debug.xcconfig */,
-				0F1ECFDA21FBC151B8B1E543 /* Pods-EziBazi2.release.xcconfig */,
+				C7EF73BBFA9B6EF4F4E69978 /* Pods-EziBazi2.debug.xcconfig */,
+				DE0D4778AE5A1CF06A3B4B98 /* Pods-EziBazi2.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EBBCABDB11B95D66616938F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82CD0634A2CE68DCACB34D31 /* Pods_EziBazi2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,11 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DBBFBF1214A99580037BFF6 /* Build configuration list for PBXNativeTarget "EziBazi2" */;
 			buildPhases = (
-				4AAF8353A8E246FA55935FD5 /* [CP] Check Pods Manifest.lock */,
+				06907EA928942CA63417E9AA /* [CP] Check Pods Manifest.lock */,
 				5DBBFBDB214A99580037BFF6 /* Sources */,
 				5DBBFBDC214A99580037BFF6 /* Frameworks */,
 				5DBBFBDD214A99580037BFF6 /* Resources */,
-				A17C7213D57B6640C163D68E /* [CP] Embed Pods Frameworks */,
+				D49C0BC5E2E1F4DA1932D9FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -287,7 +290,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4AAF8353A8E246FA55935FD5 /* [CP] Check Pods Manifest.lock */ = {
+		06907EA928942CA63417E9AA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,7 +308,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A17C7213D57B6640C163D68E /* [CP] Embed Pods Frameworks */ = {
+		D49C0BC5E2E1F4DA1932D9FD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,10 +316,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EziBazi2/Pods-EziBazi2-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -344,6 +349,7 @@
 				5D4ECE392168D1BF001A7DE6 /* Search.swift in Sources */,
 				5D2A817B21721734006D2D24 /* GetDataForPostCV.swift in Sources */,
 				5DF15B47215BB45C00484A77 /* saleTableViewCell.swift in Sources */,
+				5DAC77272174CA9900A62C3D /* SignInVC.swift in Sources */,
 				5D1BDD05215B8D96006741CF /* RentViewController.swift in Sources */,
 				5D90D999216F680900209A9B /* GameDetails.swift in Sources */,
 				5DC190F72151279200B08D9E /* SaleCollectionViewCell.swift in Sources */,
@@ -493,7 +499,7 @@
 		};
 		5DBBFBF2214A99580037BFF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCE551E4CA10004F0CE24879 /* Pods-EziBazi2.debug.xcconfig */;
+			baseConfigurationReference = C7EF73BBFA9B6EF4F4E69978 /* Pods-EziBazi2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -510,7 +516,7 @@
 		};
 		5DBBFBF3214A99580037BFF6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F1ECFDA21FBC151B8B1E543 /* Pods-EziBazi2.release.xcconfig */;
+			baseConfigurationReference = DE0D4778AE5A1CF06A3B4B98 /* Pods-EziBazi2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

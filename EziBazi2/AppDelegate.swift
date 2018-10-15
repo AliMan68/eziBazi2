@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UISearchBar.appearance().tintColor = UIColor.ezibaziThem
         UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor:UIColor.white], for: .selected)
         UISearchBar.appearance().semanticContentAttribute = .forceRightToLeft
+        UITextField.appearance().semanticContentAttribute = .forceRightToLeft
        
         return true
     }

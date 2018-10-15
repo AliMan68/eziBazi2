@@ -1,16 +1,20 @@
 PODS:
   - FSPagerView (0.7.2)
+  - TextFieldEffects (1.4.0)
 
 DEPENDENCIES:
   - FSPagerView
+  - TextFieldEffects
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FSPagerView
+    - TextFieldEffects
 
 SPEC CHECKSUMS:
   FSPagerView: 7515f63c424da71623d299d4fbbfb3dd884642ff
+  TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
 
-PODFILE CHECKSUM: 04a65ceff67cb978f920206057333b46276daf61
+PODFILE CHECKSUM: fb4a25fce1a8367d8c18e75e3483c47390088c5f
 
 COCOAPODS: 1.5.3
