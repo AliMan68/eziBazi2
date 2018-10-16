@@ -1321,8 +1321,8 @@
                                                 <rect key="frame" x="8" y="126" width="398" height="120"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXG-Ai-D2t">
-                                                        <rect key="frame" x="124.33333333333333" y="46" width="150" height="29"/>
-                                                        <color key="backgroundColor" red="0.83828645944595337" green="0.44274765253067017" blue="0.21988996863365173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="124.33333333333333" y="46.333333333333343" width="150" height="28.999999999999972"/>
+                                                        <color key="backgroundColor" red="0.66924029588699341" green="0.26005825400352478" blue="0.055252857506275177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Psh-3A-kjv"/>
                                                         </constraints>

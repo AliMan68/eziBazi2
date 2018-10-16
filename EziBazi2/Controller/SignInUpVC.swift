@@ -26,8 +26,12 @@ import UIKit
     }()
     let userNameTextField :UITextField = {
        let tf = UITextField()
-        tf.placeholder = "نام کاربری"
+        tf.textAlignment = .natural
+        tf.contentHorizontalAlignment = .right
         tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.attributedPlaceholder =
+            NSAttributedString(string: "User Name", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        tf.textColor = UIColor.white
         return tf
     }()
     let seprator1:UIView = {
@@ -39,8 +43,15 @@ import UIKit
     }()
     let emailTextField :UITextField = {
         let tf = UITextField()
-        tf.placeholder = "ایمیل"
+        tf.contentHorizontalAlignment = .left
+        tf.textColor = UIColor.white
+        tf.placeholder = "Email"
+        tf.attributedPlaceholder =
+            NSAttributedString(string: "Email", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+//        tf.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedStringKey.writingDirection: NSWritingDirection.rightToLeft ] forKey: "attributedPlaceholder")
+//
         tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.tintColor = UIColor.red
         return tf
     }()
     let registerButton:UIButton = {
@@ -51,11 +62,59 @@ import UIKit
         button.tintColor = UIColor.white
         button.layer.cornerRadius = 10
         button.titleLabel?.font = UIFont(name: "IRAN_Sans", size: 16)
+        button.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
         return button
     }()
+    @objc func buttonTouched(){
+        if emailTextField.text?.count != 0 && passwordTextField.text?.count != 0 && userNameTextField.text?.count != 0{
+        if !isValidEmail(testStr: emailTextField.text!) {
+            let alert = UIAlertController(title: "توجه !!!", message: "فرمت ایمیل وارد شده غلط است", preferredStyle: UIAlertControllerStyle.actionSheet)
+            alert.setValue(NSAttributedString(string: "توجه !!!", attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 17),NSAttributedStringKey.foregroundColor : UIColor.red]), forKey: "attributedTitle")
+            alert.setValue(NSAttributedString(string:  "فرمت ایمیل وارد شده غلط است" , attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 18), NSAttributedStringKey.foregroundColor : UIColor.white]), forKey: "attributedMessage")
+            alert.addAction(UIAlertAction(title: "اوکی", style: .destructive, handler: nil))
+            alert.view.tintColor = UIColor.white
+            self.present(alert, animated: true, completion: nil)
+        }else if (passwordTextField.text?.count)! < 7 {
+            let alert = UIAlertController(title: "توجه !!!", message: "پسورد حداقل باید ۶ رقمی باشد", preferredStyle: UIAlertControllerStyle.actionSheet)
+            alert.setValue(NSAttributedString(string: "توجه !!!", attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 17),NSAttributedStringKey.foregroundColor : UIColor.red]), forKey: "attributedTitle")
+            alert.setValue(NSAttributedString(string:  "پسورد حداقل باید ۶ رقمی باشد" , attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 18), NSAttributedStringKey.foregroundColor : UIColor.white]), forKey: "attributedMessage")
+            alert.addAction(UIAlertAction(title: "اوکی", style: .destructive, handler: nil))
+            alert.view.tintColor = UIColor.white
+            self.present(alert, animated: true, completion: nil)
+        
+            }
+        else{
+            print("Hello My Hero")
+            SignUP.signUpMethod(userNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, completion: { (token,statusCode) in
+                if statusCode == 1 {
+                    print("Registered Successfully...Horaaa")
+                    self.navigationController?.dismiss(animated: true, completion: nil)
+                }else{
+                    print("Registered Failed...")
+                }
+                
+                
+            })
+            }
+    }
+       else {
+            let alert = UIAlertController(title: "توجه !!!", message: "لطفا تمامی موارد را پر کنید", preferredStyle: UIAlertControllerStyle.actionSheet)
+            alert.setValue(NSAttributedString(string: "توجه !!!", attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 17),NSAttributedStringKey.foregroundColor : UIColor.red]), forKey: "attributedTitle")
+            alert.setValue(NSAttributedString(string: "لطفا تمامی موارد را پر کنید" , attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 18), NSAttributedStringKey.foregroundColor : UIColor.white]), forKey: "attributedMessage")
+            alert.addAction(UIAlertAction(title: "اوکی", style: .destructive, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     let passwordTextField :UITextField = {
         let tf = UITextField()
-        tf.placeholder = " پسورد "
+        tf.textColor = UIColor.white
+        tf.setTextIcon(icon: UIImage(named:"lock")!)
+        tf.placeholder = "Password"
+        tf.attributedPlaceholder =
+            NSAttributedString(string: "Password", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        tf.tintColor = UIColor.red
+
+        
         tf.isSecureTextEntry = true
         tf.translatesAutoresizingMaskIntoConstraints = false
         return tf
@@ -83,15 +142,18 @@ import UIKit
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 61/255, green: 91/255, blue: 151/255, alpha: 1)
+        inputContainer.backgroundColor = UIColor(red: 20/255, green: 20/255, blue: 20/255, alpha: 1)
+        view.backgroundColor = UIColor(red: 20/255, green: 20/255, blue: 20/255, alpha: 1)
         view.addSubview(inputContainer)
         view.addSubview(registerButton)
         view.addSubview(segmentControl)
         containerConstrant()
         buttonConstrant()
         setupSegmentControl()
+       
         
     }
+    
     func setupSegmentControl(){
         segmentControl.bottomAnchor.constraint(equalTo: inputContainer.topAnchor, constant: -12).isActive = true
         segmentControl.widthAnchor.constraint(equalTo: inputContainer.widthAnchor, multiplier: 0.75).isActive = true
@@ -127,15 +189,16 @@ import UIKit
         emailContainerHeight =  emailTextField.heightAnchor.constraint(equalTo: inputContainer.heightAnchor, multiplier: 1/3)
         emailContainerHeight?.isActive = true
         inputContainer.addSubview(seprator1)
-        seprator1.leftAnchor.constraint(equalTo: inputContainer.leftAnchor).isActive = true
-        seprator1.topAnchor.constraint(equalTo: emailTextField.bottomAnchor).isActive = true
-        seprator1.widthAnchor.constraint(equalTo: inputContainer.widthAnchor).isActive = true
-        seprator1.heightAnchor.constraint(equalToConstant: 1).isActive = true
+
         inputContainer.addSubview(passwordTextField)
         passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor).isActive = true
         passwordTextField.leftAnchor.constraint(equalTo: inputContainer.leftAnchor, constant: 12).isActive = true
         passwordContainerHeight = passwordTextField.heightAnchor.constraint(equalTo: inputContainer.heightAnchor, multiplier: 1/3)
         passwordContainerHeight?.isActive = true
+        seprator1.leftAnchor.constraint(equalTo: inputContainer.leftAnchor).isActive = true
+        seprator1.bottomAnchor.constraint(equalTo: passwordTextField.topAnchor).isActive = true
+        seprator1.widthAnchor.constraint(equalTo: inputContainer.widthAnchor).isActive = true
+        seprator1.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
     
     }
@@ -154,4 +217,20 @@ import UIKit
         return emailTest.evaluate(with: testStr)
     }
 
+
+}
+extension UITextField {
+    
+    func setTextIcon(icon: UIImage) {
+        let imageView = UIImageView()
+        imageView.image = icon
+        imageView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        let view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+        view.backgroundColor = UIColor.clear
+        view.addSubview(imageView)
+        self.rightViewMode = .always
+        self.rightView = view
+    }
+    
 }

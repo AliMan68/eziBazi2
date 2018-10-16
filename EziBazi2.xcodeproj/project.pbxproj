@@ -26,7 +26,7 @@
 		5D8483B82166416F00F52705 /* GetDataForRelated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8483B72166416F00F52705 /* GetDataForRelated.swift */; };
 		5D90D999216F680900209A9B /* GameDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D90D998216F680900209A9B /* GameDetails.swift */; };
 		5DA087F921733B8F00AA2319 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA087F821733B8F00AA2319 /* Reachability.swift */; };
-		5DAC77272174CA9900A62C3D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC77262174CA9900A62C3D /* SignInVC.swift */; };
+		5DAC77272174CA9900A62C3D /* SignInUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC77262174CA9900A62C3D /* SignInUpVC.swift */; };
 		5DB372FB216253CC005BD903 /* ezibaziOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB372FA216253CC005BD903 /* ezibaziOrange.swift */; };
 		5DBBFBE3214A99580037BFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBBFBE2214A99580037BFF6 /* AppDelegate.swift */; };
 		5DBBFBE5214A99580037BFF6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBBFBE4214A99580037BFF6 /* HomeViewController.swift */; };
@@ -34,6 +34,8 @@
 		5DBBFBEA214A99580037BFF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DBBFBE9214A99580037BFF6 /* Assets.xcassets */; };
 		5DBBFBED214A99580037BFF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBBFBEB214A99580037BFF6 /* LaunchScreen.storyboard */; };
 		5DC190F72151279200B08D9E /* SaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC190F62151279200B08D9E /* SaleCollectionViewCell.swift */; };
+		5DC7CF7A217625770097B33A /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC7CF79217625770097B33A /* SignInModel.swift */; };
+		5DC7CF7C217626100097B33A /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC7CF7B217626100097B33A /* SignUpModel.swift */; };
 		5DE563C4216C9E6300636D13 /* spinnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE563C2216C9E6300636D13 /* spinnerCell.swift */; };
 		5DE563C5216C9E6300636D13 /* spinnerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DE563C3216C9E6300636D13 /* spinnerCell.xib */; };
 		5DEA75792162652C0063274E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA75782162652C0063274E /* SearchViewController.swift */; };
@@ -65,7 +67,7 @@
 		5D8483B72166416F00F52705 /* GetDataForRelated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataForRelated.swift; sourceTree = "<group>"; };
 		5D90D998216F680900209A9B /* GameDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetails.swift; sourceTree = "<group>"; };
 		5DA087F821733B8F00AA2319 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		5DAC77262174CA9900A62C3D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		5DAC77262174CA9900A62C3D /* SignInUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpVC.swift; sourceTree = "<group>"; };
 		5DB372FA216253CC005BD903 /* ezibaziOrange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ezibaziOrange.swift; sourceTree = "<group>"; };
 		5DBBFBDF214A99580037BFF6 /* EziBazi2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EziBazi2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBBFBE2214A99580037BFF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,8 @@
 		5DBBFBEC214A99580037BFF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DBBFBEE214A99580037BFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DC190F62151279200B08D9E /* SaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleCollectionViewCell.swift; sourceTree = "<group>"; };
+		5DC7CF79217625770097B33A /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		5DC7CF7B217626100097B33A /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		5DE563C2216C9E6300636D13 /* spinnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spinnerCell.swift; sourceTree = "<group>"; };
 		5DE563C3216C9E6300636D13 /* spinnerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = spinnerCell.xib; sourceTree = "<group>"; };
 		5DEA75782162652C0063274E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				5D2A817A21721733006D2D24 /* GetDataForPostCV.swift */,
 				5D2A817C21724546006D2D24 /* GetDataForSlider.swift */,
 				5DA087F821733B8F00AA2319 /* Reachability.swift */,
+				5DC7CF79217625770097B33A /* SignInModel.swift */,
+				5DC7CF7B217626100097B33A /* SignUpModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,7 +145,7 @@
 				5DF15B44215BB41000484A77 /* SaleViewController.swift */,
 				5DEA75782162652C0063274E /* SearchViewController.swift */,
 				5D90D998216F680900209A9B /* GameDetails.swift */,
-				5DAC77262174CA9900A62C3D /* SignInVC.swift */,
+				5DAC77262174CA9900A62C3D /* SignInUpVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 				5DE563C4216C9E6300636D13 /* spinnerCell.swift in Sources */,
 				5D2A81792171F1B3006D2D24 /* GameDetailsCell.swift in Sources */,
 				5D2A817D21724546006D2D24 /* GetDataForSlider.swift in Sources */,
+				5DC7CF7A217625770097B33A /* SignInModel.swift in Sources */,
 				5D348A67216F4BCC004CD001 /* GetDataForSaleVC.swift in Sources */,
 				5DA087F921733B8F00AA2319 /* Reachability.swift in Sources */,
 				5D348A69216F4C0D004CD001 /* GetDataForSaleCV.swift in Sources */,
@@ -349,10 +356,11 @@
 				5D4ECE392168D1BF001A7DE6 /* Search.swift in Sources */,
 				5D2A817B21721734006D2D24 /* GetDataForPostCV.swift in Sources */,
 				5DF15B47215BB45C00484A77 /* saleTableViewCell.swift in Sources */,
-				5DAC77272174CA9900A62C3D /* SignInVC.swift in Sources */,
+				5DAC77272174CA9900A62C3D /* SignInUpVC.swift in Sources */,
 				5D1BDD05215B8D96006741CF /* RentViewController.swift in Sources */,
 				5D90D999216F680900209A9B /* GameDetails.swift in Sources */,
 				5DC190F72151279200B08D9E /* SaleCollectionViewCell.swift in Sources */,
+				5DC7CF7C217626100097B33A /* SignUpModel.swift in Sources */,
 				5DBBFBE3214A99580037BFF6 /* AppDelegate.swift in Sources */,
 				5DFB6EE8215CE89000CE384E /* Photo.swift in Sources */,
 				5DEA75792162652C0063274E /* SearchViewController.swift in Sources */,
