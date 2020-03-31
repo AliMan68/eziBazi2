@@ -386,25 +386,13 @@ class ProfileController: UIViewController,UITextFieldDelegate,SFSafariViewContro
             if getFullName() != ""{
                 fullName.text = getFullName()
                 alternativeView.isHidden = true
-                
             }
         }else{
 //            reckogningBtn.isHidden = true
-            firstView.isHidden = false
+            firstView.isHidden = true
             mainButton.backgroundColor = UIColor.easyBaziGreen
+            }
         }
-        setupReckogningView()
-
-        
-        }
-    
-    fileprivate func setupReckogningView() {
-//        scrollView.addSubview(reckogningBtn)
-//        reckogningBtn.topAnchor.constraint(equalTo: secondView.bottomAnchor, constant: 16).isActive = true
-//        reckogningBtn.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: 0).isActive = true
-//        reckogningBtn.heightAnchor.constraint(equalToConstant: 35).isActive = true
-//        reckogningBtn.widthAnchor.constraint(equalToConstant: 140).isActive = true
-    }
     
     func setupCounter(){
         

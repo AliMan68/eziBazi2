@@ -40,9 +40,7 @@ class SwipingController: UICollectionViewController,UICollectionViewDelegateFlow
             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let destination = storyboard.instantiateViewController(withIdentifier: "homeVC") as? UITabBarController
             destination?.modalPresentationStyle = .fullScreen
-            
             self.present(destination!, animated: true, completion: nil)
-            
             return
         }
         
@@ -69,7 +67,7 @@ class SwipingController: UICollectionViewController,UICollectionViewDelegateFlow
             prevButton.alpha = 1
             prevButton.setTitle("قبلی", for: .normal)
         }
-        if pageControl.currentPage > 2{
+        if pageControl.currentPage > 1{
             nextButton.setTitle("بعدی", for: .normal)
         }
         collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
@@ -129,12 +127,27 @@ class SwipingController: UICollectionViewController,UICollectionViewDelegateFlow
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! IntroCell
         if indexPath.row == 0 {
-                cell.imageView.loadHTMLString(contents1 as String, baseURL: baseUrl1)
+            cell.webViewWidth.isActive = false
+            cell.imageViewWidth.isActive = true
+            cell.title.text = "ایزی بازی"
+            cell.explanation.text = "سیستم کرایه و خرید بازی های کنسولی"
+            return cell
         }else if indexPath.row == 1 {
-                cell.imageView.loadHTMLString(contents2 as String, baseURL: baseUrl2)
+            cell.webViewWidth.isActive = true
+            cell.imageViewWidth.isActive = false
+            cell.webView.loadHTMLString(contents1 as String, baseURL: baseUrl1)
+            cell.title.text = "تحویل رایگان"
+            cell.explanation.text = "تمامی بازی ها در محل و رایگان تحویل کاربران می شود."
+            return cell
+        }else if indexPath.row == 2{
+            cell.webViewWidth.isActive = true
+            cell.imageViewWidth.isActive = false
+            cell.webView.loadHTMLString(contents2 as String, baseURL: baseUrl2)
+            cell.title.text = "کاهش هزینه"
+            cell.explanation.text = "صرفه جویی در هزینه ها با کرایه و خرید بازی ها "
             return cell
         }
-        cell.imageView.loadHTMLString(contents1 as String, baseURL: baseUrl1)
+        cell.webView.loadHTMLString(contents1 as String, baseURL: baseUrl1)
 //        print("Row ==>\(indexPath.row)")
 //        print("This is Item==>\(indexPath.item)")
 //        cell.backgroundColor = indexPath.item % 2 == 0 ? .blue : .white
@@ -150,7 +163,7 @@ class SwipingController: UICollectionViewController,UICollectionViewDelegateFlow
         pageControl.currentPage = Int(targetContentOffset.pointee.x / view.frame.width)
         
         prevButton.alpha = 1
-        if pageControl.currentPage  > 2 {
+        if pageControl.currentPage  > 1 {
             nextButton.setTitle("اتمام", for: .normal)
         }else{
             nextButton.setTitle("بعدی", for: .normal)

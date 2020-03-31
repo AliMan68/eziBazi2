@@ -234,7 +234,7 @@ class GameDetails: UIViewController {
     
     fileprivate func configeVideoPlayer() {
         containerView.frame.size.width = self.view.frame.size.width
-//        player(url: game.game_info.videos[0].url)
+        player(url: game.game_info.videos[0].url)
         containerView.addSubview(overLayView)
         overLayView.addSubview(loading)
         overLayView.addSubview(playPauseButton)
