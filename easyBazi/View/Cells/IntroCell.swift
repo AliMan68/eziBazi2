@@ -104,7 +104,7 @@ class IntroCell: UICollectionViewCell {
         imageView.heightAnchor.constraint(equalTo: topContainer.heightAnchor, multiplier: 1/2).isActive = true
         imageView.centerYAnchor.constraint(equalTo: topContainer.centerYAnchor).isActive = true
         webViewWidth.isActive = false
-        
+        print("we are here")
 //        imageView.topAnchor.constraint(equalTo: topAnchor, constant: 100).isActive = true
     }
     
