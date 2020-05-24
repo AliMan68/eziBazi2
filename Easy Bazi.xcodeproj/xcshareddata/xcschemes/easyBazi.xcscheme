@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5DBBFBDE214A99580037BFF6"
-               BuildableName = "easyBazi.app"
-               BlueprintName = "easyBazi"
-               ReferencedContainer = "container:easyBazi.xcodeproj">
+               BuildableName = "Easy Bazi.app"
+               BlueprintName = "Easy Bazi"
+               ReferencedContainer = "container:Easy Bazi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,9 +31,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5DBBFBDE214A99580037BFF6"
-            BuildableName = "easyBazi.app"
-            BlueprintName = "easyBazi"
-            ReferencedContainer = "container:easyBazi.xcodeproj">
+            BuildableName = "Easy Bazi.app"
+            BlueprintName = "Easy Bazi"
+            ReferencedContainer = "container:Easy Bazi.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -54,9 +54,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5DBBFBDE214A99580037BFF6"
-            BuildableName = "easyBazi.app"
-            BlueprintName = "easyBazi"
-            ReferencedContainer = "container:easyBazi.xcodeproj">
+            BuildableName = "Easy Bazi.app"
+            BlueprintName = "Easy Bazi"
+            ReferencedContainer = "container:Easy Bazi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5DBBFBDE214A99580037BFF6"
-            BuildableName = "easyBazi.app"
-            BlueprintName = "easyBazi"
-            ReferencedContainer = "container:easyBazi.xcodeproj">
+            BuildableName = "Easy Bazi.app"
+            BlueprintName = "Easy Bazi"
+            ReferencedContainer = "container:Easy Bazi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

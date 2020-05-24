@@ -44,7 +44,7 @@ class SwipingController: UICollectionViewController,UICollectionViewDelegateFlow
             return
         }
         
-        if pageControl.currentPage >= 2 {
+        if pageControl.currentPage >= 1 {
             nextButton.setTitle("اتمام", for: .normal)
         }else{
             prevButton.alpha = 1
@@ -112,7 +112,7 @@ class SwipingController: UICollectionViewController,UICollectionViewDelegateFlow
             guard let path1 = Bundle.main.path(forResource: "motorcycle", ofType: "svg")else{ print("Error in reading path"); return}
             contents1 = try String(contentsOfFile: path1, encoding: .utf8)
             baseUrl1 = URL(fileURLWithPath: path1)
-            guard let path2 = Bundle.main.path(forResource: "motorcycle", ofType: "svg")else{ print("Error in reading path"); return}
+            guard let path2 = Bundle.main.path(forResource: "save_money", ofType: "svg")else{ print("Error in reading path"); return}
             contents2 = try String(contentsOfFile: path2, encoding: .utf8)
             baseUrl2 = URL(fileURLWithPath: path2)
                 }
@@ -127,6 +127,8 @@ class SwipingController: UICollectionViewController,UICollectionViewDelegateFlow
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! IntroCell
         if indexPath.row == 0 {
+            print(cell.webViewWidth.isActive)
+            print(cell.imageViewWidth.isActive)
             cell.webViewWidth.isActive = false
             cell.imageViewWidth.isActive = true
             cell.title.text = "ایزی بازی"
@@ -134,14 +136,14 @@ class SwipingController: UICollectionViewController,UICollectionViewDelegateFlow
             return cell
         }else if indexPath.row == 1 {
             cell.webViewWidth.isActive = true
-            cell.imageViewWidth.isActive = false
+            cell.imageView.removeFromSuperview()
             cell.webView.loadHTMLString(contents1 as String, baseURL: baseUrl1)
             cell.title.text = "تحویل رایگان"
             cell.explanation.text = "تمامی بازی ها در محل و رایگان تحویل کاربران می شود."
             return cell
         }else if indexPath.row == 2{
             cell.webViewWidth.isActive = true
-            cell.imageViewWidth.isActive = false
+            cell.imageView.removeFromSuperview()
             cell.webView.loadHTMLString(contents2 as String, baseURL: baseUrl2)
             cell.title.text = "کاهش هزینه"
             cell.explanation.text = "صرفه جویی در هزینه ها با کرایه و خرید بازی ها "

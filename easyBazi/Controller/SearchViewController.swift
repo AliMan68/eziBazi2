@@ -56,9 +56,9 @@ class SearchViewController: UIViewController,SFSafariViewControllerDelegate {
     let segment:UISegmentedControl = {
         var sc = UISegmentedControl()
         sc.translatesAutoresizingMaskIntoConstraints = false
-        sc.insertSegment(withTitle: "کرایه ای ها", at: 0, animated: true)
-        sc.insertSegment(withTitle: "فروشی ها", at: 1, animated: true)
-        sc.insertSegment(withTitle: "پست ها", at: 2, animated: true)
+//        sc.insertSegment(withTitle: "کرایه ای ها", at: 0, animated: true)
+        sc.insertSegment(withTitle: "فروشی ها", at: 0, animated: true)
+        sc.insertSegment(withTitle: "پست ها", at: 1, animated: true)
         sc.selectedSegmentIndex = 0
         let attr:[AnyHashable:Any] = [NSAttributedStringKey.font: UIFont(name: "IRANSans", size: 14)!]
 //        let attr = NSDictionary(object: UIFont(name: "IRANSans", size: 14)!, forKey: NSAttributedStringKey.font as NSCopying)
@@ -201,19 +201,21 @@ extension SearchViewController:UICollectionViewDataSource,UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var temp:UICollectionViewCell!
-        if segment.selectedSegmentIndex == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: rentCellId, for: indexPath) as! SearchRentCell
-            let game = searachResult[indexPath.row]
-            cell.game = game
-            cell.rentPercent = Int(rentTypes[0].price_percent)
-            temp = cell
-        }else if segment.selectedSegmentIndex == 1{
+//        if segment.selectedSegmentIndex == 0 {
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: rentCellId, for: indexPath) as! SearchRentCell
+//            let game = searachResult[indexPath.row]
+//            cell.game = game
+//            cell.rentPercent = Int(rentTypes[0].price_percent)
+//            temp = cell
+//        }else
+            if segment.selectedSegmentIndex == 0{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: shopCellId, for: indexPath) as! SearchShopCell
             let game = searachResult[indexPath.row]
             cell.game = game
             temp = cell
-        }else if segment.selectedSegmentIndex == 2{
+        }else if segment.selectedSegmentIndex == 1{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: postCellId, for: indexPath) as! SearchPostCell
+                print(postSearachResult.count)
             let post = postSearachResult[indexPath.row]
             cell.post = post
             temp = cell
@@ -279,15 +281,23 @@ extension SearchViewController:UICollectionViewDataSource,UICollectionViewDelega
             postSearachResult.removeAll()
             searchCollectionView.reloadData()
             switch sender.selectedSegmentIndex {
-            case 0 :
-                searchType = "rent"
-                search()
-            case 1 :
-                searchType = "shop"
-                search()
-            case 2 :
-                searchType = "post"
-                searchForPosts()
+//            case 0 :
+//                searchType = "rent"
+//                search()
+//            case 1 :
+//                searchType = "shop"
+//                search()
+//            case 2 :
+//                searchType = "post"
+//                searchForPosts()
+                //new version edit
+                case 0 :
+                    searchType = "shop"
+                    search()
+                case 1 :
+                    searchType = "post"
+                    searchForPosts()
+                          
             default:
                 print("case here")
             }
@@ -349,6 +359,7 @@ extension SearchViewController:UICollectionViewDataSource,UICollectionViewDelega
             Search.forPosts(searchedText,completion: { (posts,message,status) in
                  if status == 1{
                      self.activityIndicatorView.stopAnimating()
+                    
                      self.postSearachResult = posts
                      self.message = message
                      self.searchCollectionView.reloadData()

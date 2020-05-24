@@ -22,8 +22,12 @@ class ActivityMenu: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         horizontalBarLeftAnchorConstraint = horizontalBarView.leftAnchor.constraint(equalTo: self.leftAnchor)
         horizontalBarLeftAnchorConstraint?.isActive = true
         horizontalBarView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        horizontalBarView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1/2).isActive = true
         horizontalBarView.heightAnchor.constraint(equalToConstant: 2).isActive = true
+        
+        //new edite fo decrease sections
+        //        horizontalBarView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1/2).isActive = true
+        
+        horizontalBarView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         
     }
     
@@ -43,8 +47,8 @@ class ActivityMenu: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     }()
     
     let cellId = "cellId"
-    let imageNames = ["اجاره شده ها", "خریداری شده ها"]
-    
+//    let imageNames = ["اجاره شده ها", "خریداری شده ها"]
+    let items = ["خریداری شده ها"]
     override init(frame: CGRect) {
         super.init(frame: frame)
         collectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
@@ -56,22 +60,22 @@ class ActivityMenu: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         let selectedIndexPath = IndexPath(item: 0, section: 0)
         collectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: .bottom)
         setupHorizontalBar()
-        backgroundColor = .red
+        backgroundColor = .clear
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCell
-        cell.label.text = imageNames[indexPath.item]
+        cell.label.text = items[indexPath.item]
         cell.tintColor = UIColor.color(red: 91, green: 14, blue: 13, alpha: 1)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: frame.width / 2, height: frame.height)
+        return CGSize(width: frame.width, height: frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

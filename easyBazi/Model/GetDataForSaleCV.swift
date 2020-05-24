@@ -9,8 +9,10 @@
 import UIKit
 
 class GetDataForSaleCV {
-    static func getData(_ Url:String,completion:@escaping (Array<Game>,Int)-> Void){
-        var request = URLRequest(url: URL(string:Url )!)
+    static func getData(completion:@escaping (Array<Game>,Int)-> Void){
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let saleUrl:String = "\(delegate.url)/api/game-for-shop-index/14"
+        var request = URLRequest(url: URL(string:saleUrl)!)
         request.httpMethod = "GET"
         var gameArray = [Game]()
         var status:Int!

@@ -25,7 +25,7 @@ class ActivityRentCell: baseCell {
                 gameImage.image = UIImage(named:"notFound")
             }
             
-            gameName.text = game.game_for_rent.game_info.name
+            gameName.text = game.game_for_rent.game_info.name!.uppercased()
             gameRentPrice.text = convertToPersian(inputStr: String(describing: Int(game.rent_price).formattedWithSeparator)) + " تومان"
             //calculate rent time in day's
             circleContainer.rentPeriod = CGFloat(dateDiff(start: game.created_at, finish: game.finished_at))

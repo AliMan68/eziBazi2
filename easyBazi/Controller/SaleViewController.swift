@@ -94,7 +94,7 @@ extension SaleViewController:UITableViewDataSource,UITableViewDelegate{
         }else{
             saleCell.gameImage.image = UIImage(named:"GOW")
         }
-        saleCell.gameName.text = gameArray[indexPath.row].game_info.name
+        saleCell.gameName.text = gameArray[indexPath.row].game_info.name?.uppercased()
         if gameArray[indexPath.row].count == 0{
             saleCell.gamePrice.backgroundColor = UIColor.notAvailable
             saleCell.gamePrice.text = " ناموجود "
@@ -102,7 +102,7 @@ extension SaleViewController:UITableViewDataSource,UITableViewDelegate{
             saleCell.gamePrice.backgroundColor = UIColor.Available
             saleCell.gamePrice.text = convertToPersian(inputStr: "\(String(describing: Int(gameArray[indexPath.row].price).formattedWithSeparator))") + " تومان "
         }
-            saleCell.gameRegion.text = "Region :\((gameArray[indexPath.row].region))"
+            saleCell.gameRegion.text = "REGION :\((gameArray[indexPath.row].region))"
         if gameArray[indexPath.row].game_info.console.name == "ps1" || gameArray[indexPath.row].game_info.console.name == "ps4" || gameArray[indexPath.row].game_info.console.name == "ps2"{
             saleCell.consoleImage.image = UIImage(named:"ps")
         }else{

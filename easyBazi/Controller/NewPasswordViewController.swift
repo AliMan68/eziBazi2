@@ -139,9 +139,7 @@ class NewPasswordViewController: UIViewController {
                             self.view.endEditing(true)
                         }
                     }
-                    
                 }
-               
             }
             
             fileprivate func passwordInputSetup(){

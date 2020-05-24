@@ -6,7 +6,7 @@
 //  Copyright © 2018 AliArabgary. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 struct PostObject: Decodable{
@@ -27,8 +27,10 @@ struct Post:Decodable {
     var created_at:String
 }
 class GetDataForPostCV {
-    static func getData(_ Url:String,completion:@escaping (Array<Post>,Int)-> Void){
-        var request = URLRequest(url: URL(string:Url )!)
+    static func getData(completion:@escaping (Array<Post>,Int)-> Void){
+        let delegate = (UIApplication.shared.delegate as! AppDelegate)
+        let urlString = "\(delegate.url)/api/post"
+        var request = URLRequest(url: URL(string:urlString)!)
         request.httpMethod = "GET"
         var status:Int!
         var gameArray = [Post]()

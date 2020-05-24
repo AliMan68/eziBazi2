@@ -22,16 +22,16 @@
         <!--Sale View Controller-->
         <scene sceneID="S2x-E7-HvZ">
             <objects>
-                <viewController id="Ypw-t1-v26" customClass="SaleViewController" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="saleVC" id="Ypw-t1-v26" customClass="SaleViewController" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O9D-f7-hJq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="175" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KYu-K9-eCt">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" red="0.05402778834104538" green="0.087473921477794647" blue="0.12954065203666687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="saleCell" rowHeight="175" id="m75-AF-Do4" customClass="SaleTableViewCell" customModule="easyBazi" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="saleCell" rowHeight="175" id="m75-AF-Do4" customClass="SaleTableViewCell" customModule="Easy_Bazi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m75-AF-Do4" id="A6a-qf-Fu6">
@@ -159,7 +159,7 @@
         <!--جستجو-->
         <scene sceneID="say-Iw-EXf">
             <objects>
-                <viewController id="wwP-ld-qmT" customClass="SearchViewController" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wwP-ld-qmT" customClass="SearchViewController" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rUW-hF-wWR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,7 +175,7 @@
         <!--فعالیت ها-->
         <scene sceneID="yRL-vy-nKK">
             <objects>
-                <viewController id="JO2-qq-APR" customClass="ActivityViewController" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JO2-qq-APR" customClass="ActivityViewController" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5gu-TC-90p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="762"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,368 +208,14 @@
             </objects>
             <point key="canvasLocation" x="520" y="1199"/>
         </scene>
-        <!--Data Source-->
+        <!--خانه-->
         <scene sceneID="i4z-5I-MGc">
             <objects>
-                <viewController title="خانه" id="K44-em-4PL" customClass="HomeViewController" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="خانه" id="K44-em-4PL" customClass="HomeViewController" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wSo-EE-xIc">
                         <rect key="frame" x="0.0" y="0.0" width="374" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAp-Jd-9O2">
-                                <rect key="frame" x="0.0" y="88" width="374" height="829"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RCY-TX-IKb" userLabel="Home Content">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="909"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9X-F2-YyI" customClass="FSPagerView" customModule="FSPagerView">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="jnr-cc-hjY"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="K44-em-4PL" id="2TD-Re-MnM"/>
-                                                    <outlet property="delegate" destination="K44-em-4PL" id="pQQ-bM-JTg"/>
-                                                </connections>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMo-fI-oCe" userLabel="Page Controller" customClass="FSPageControl" customModule="FSPagerView">
-                                                <rect key="frame" x="0.0" y="180" width="374" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="bGs-m3-FMW"/>
-                                                </constraints>
-                                            </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="4y4-0g-oKB">
-                                                <rect key="frame" x="16" y="220" width="342" height="37"/>
-                                                <subviews>
-                                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8I-dq-11a">
-                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="37"/>
-                                                        <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="15"/>
-                                                        <state key="normal" title="بیشتر">
-                                                            <color key="titleColor" red="1" green="0.3529411764705882" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <segue destination="Ypw-t1-v26" kind="show" id="Amt-tF-xRb"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آخرین فروشی ها" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNr-6n-mcx">
-                                                        <rect key="frame" x="231" y="0.0" width="111" height="37"/>
-                                                        <fontDescription key="fontDescription" name="IRANSans-Bold" family="IRANSans" pointSize="15"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="M44-kG-KJK">
-                                                <rect key="frame" x="16" y="439" width="342" height="37"/>
-                                                <subviews>
-                                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXQ-pC-kxh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="37"/>
-                                                        <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="15"/>
-                                                        <state key="normal" title="بیشتر">
-                                                            <color key="titleColor" red="1" green="0.3529411764705882" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <segue destination="p0s-Lh-FII" kind="show" id="mVc-9v-aMH"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آخرین کرایه ای ها" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Yl-dU-B3d">
-                                                        <rect key="frame" x="224.5" y="0.0" width="117.5" height="37"/>
-                                                        <fontDescription key="fontDescription" name="IRANSans-Bold" family="IRANSans" pointSize="15"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GLa-g3-TsD" userLabel="Rent CollectionView">
-                                                <rect key="frame" x="0.0" y="484" width="374" height="174"/>
-                                                <color key="backgroundColor" red="0.070588235294117646" green="0.14901960784313725" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="158" id="UES-jL-gTJ"/>
-                                                    <constraint firstAttribute="height" constant="174" id="YG9-uH-hVE"/>
-                                                </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lMs-bG-Mpi">
-                                                    <size key="itemSize" width="157" height="173"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                </collectionViewFlowLayout>
-                                                <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="rentCell" id="cM4-zC-eM5" userLabel="rentCell" customClass="RentCollectionViewCell" customModule="easyBazi" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.5" width="157" height="173"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="157" height="173"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GOW" translatesAutoresizingMaskIntoConstraints="NO" id="4a2-UU-gop">
-                                                                    <rect key="frame" x="16" y="0.0" width="121" height="128"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="121" id="Szo-Jy-Col"/>
-                                                                        <constraint firstAttribute="height" constant="128" id="rGh-pT-M8s"/>
-                                                                    </constraints>
-                                                                </imageView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="13Z-zz-IUz">
-                                                                    <rect key="frame" x="16" y="149" width="125" height="20"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="۲۰۲۱.۳۵۱ تومان" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4o-2X-K7W" userLabel="RentPrice">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="20"/>
-                                                                            <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="12"/>
-                                                                            <color key="textColor" red="1" green="0.3529411764705882" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="هفته ای" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3io-6d-ePd">
-                                                                            <rect key="frame" x="82" y="1.5" width="43" height="17"/>
-                                                                            <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="10"/>
-                                                                            <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pes 2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgj-dF-JDl">
-                                                                    <rect key="frame" x="16" y="132" width="106" height="17"/>
-                                                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
-                                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </view>
-                                                        <color key="backgroundColor" red="0.070588235294117646" green="0.14901960784313725" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstItem="Mgj-dF-JDl" firstAttribute="leading" secondItem="cM4-zC-eM5" secondAttribute="leading" constant="16" id="3yC-yM-VMX"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Mgj-dF-JDl" secondAttribute="trailing" constant="35" id="Ndh-lG-fLs"/>
-                                                            <constraint firstItem="Mgj-dF-JDl" firstAttribute="top" secondItem="4a2-UU-gop" secondAttribute="bottom" constant="4" id="PEM-8j-1Lt"/>
-                                                            <constraint firstAttribute="trailingMargin" secondItem="13Z-zz-IUz" secondAttribute="trailing" constant="8" id="QiC-uR-gGF"/>
-                                                            <constraint firstItem="13Z-zz-IUz" firstAttribute="leading" secondItem="cM4-zC-eM5" secondAttribute="leadingMargin" constant="8" id="Xrd-D5-O8E"/>
-                                                            <constraint firstItem="4a2-UU-gop" firstAttribute="leading" secondItem="cM4-zC-eM5" secondAttribute="leading" constant="16" id="YJp-Bj-rXG"/>
-                                                            <constraint firstItem="13Z-zz-IUz" firstAttribute="top" secondItem="Mgj-dF-JDl" secondAttribute="bottom" id="fF2-iG-4qb"/>
-                                                            <constraint firstItem="4a2-UU-gop" firstAttribute="top" secondItem="cM4-zC-eM5" secondAttribute="top" id="qfS-5n-4Wd"/>
-                                                        </constraints>
-                                                        <connections>
-                                                            <outlet property="gameImage" destination="4a2-UU-gop" id="lcH-fV-zHq"/>
-                                                            <outlet property="gameRentPrice" destination="H4o-2X-K7W" id="at5-xn-wxl"/>
-                                                            <outlet property="gameTitle" destination="Mgj-dF-JDl" id="CL8-Vy-VA9"/>
-                                                            <outlet property="weekly" destination="3io-6d-ePd" id="U78-xM-Ft5"/>
-                                                        </connections>
-                                                    </collectionViewCell>
-                                                </cells>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="K44-em-4PL" id="5gY-ie-rAi"/>
-                                                    <outlet property="delegate" destination="K44-em-4PL" id="AIQ-Sr-uHW"/>
-                                                </connections>
-                                            </collectionView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ZVF-vG-Uy4">
-                                                <rect key="frame" x="16" y="674" width="342" height="37"/>
-                                                <subviews>
-                                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amt-JD-yF0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="37"/>
-                                                        <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="15"/>
-                                                        <state key="normal" title="بیشتر">
-                                                            <color key="titleColor" red="1" green="0.3529411764705882" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="آخرین اخبار" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3J-Bw-cA4">
-                                                        <rect key="frame" x="266" y="0.0" width="76" height="37"/>
-                                                        <fontDescription key="fontDescription" name="IRANSans-Bold" family="IRANSans" pointSize="15"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iUn-eA-haG" userLabel="News Collection View">
-                                                <rect key="frame" x="0.0" y="719" width="374" height="170"/>
-                                                <color key="backgroundColor" red="0.070588235294117646" green="0.14901960784313725" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="170" id="BmX-OV-f2j"/>
-                                                </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dh4-9o-A12">
-                                                    <size key="itemSize" width="175" height="166"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                </collectionViewFlowLayout>
-                                                <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newsCell" id="bQV-nI-aev" customClass="NewsCollectionViewCell" customModule="easyBazi" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="2" width="175" height="166"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="175" height="166"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لزوم اییلاسیون ساختگی د رمواقه خاص" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWw-3o-6XC">
-                                                                    <rect key="frame" x="10" y="131" width="155" height="20"/>
-                                                                    <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="12"/>
-                                                                    <color key="textColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="2bT-KO-TvD">
-                                                                    <rect key="frame" x="10" y="0.0" width="155" height="128"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="128" id="Lbi-Xi-Jab"/>
-                                                                    </constraints>
-                                                                </imageView>
-                                                            </subviews>
-                                                        </view>
-                                                        <color key="backgroundColor" red="0.070588235294117646" green="0.14901960784313725" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstItem="HWw-3o-6XC" firstAttribute="leading" secondItem="bQV-nI-aev" secondAttribute="leading" constant="10" id="NFz-nM-4Pc"/>
-                                                            <constraint firstItem="2bT-KO-TvD" firstAttribute="top" secondItem="bQV-nI-aev" secondAttribute="top" id="NIv-Zd-E34"/>
-                                                            <constraint firstItem="2bT-KO-TvD" firstAttribute="top" secondItem="bQV-nI-aev" secondAttribute="top" id="WgY-VS-TTX"/>
-                                                            <constraint firstItem="HWw-3o-6XC" firstAttribute="top" secondItem="2bT-KO-TvD" secondAttribute="bottom" constant="3" id="bgU-Rr-Sxi"/>
-                                                            <constraint firstAttribute="trailing" secondItem="HWw-3o-6XC" secondAttribute="trailing" constant="10" id="i70-av-HX0"/>
-                                                            <constraint firstAttribute="trailing" secondItem="2bT-KO-TvD" secondAttribute="trailing" constant="10" id="tAs-um-MDq"/>
-                                                            <constraint firstItem="2bT-KO-TvD" firstAttribute="leading" secondItem="bQV-nI-aev" secondAttribute="leading" constant="10" id="vx8-j6-dTk"/>
-                                                        </constraints>
-                                                        <connections>
-                                                            <outlet property="newTitle" destination="HWw-3o-6XC" id="WER-oT-zMu"/>
-                                                            <outlet property="newsImage" destination="2bT-KO-TvD" id="P7i-Id-XAG"/>
-                                                        </connections>
-                                                    </collectionViewCell>
-                                                </cells>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="K44-em-4PL" id="EDR-LD-H9h"/>
-                                                    <outlet property="delegate" destination="K44-em-4PL" id="7sI-Ge-C8q"/>
-                                                </connections>
-                                            </collectionView>
-                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTk-zh-hbP">
-                                                <rect key="frame" x="0.0" y="427" width="358" height="0.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="0.59999999999999998" id="RWy-9d-Pok"/>
-                                                </constraints>
-                                            </view>
-                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="roX-bD-ULM">
-                                                <rect key="frame" x="0.0" y="662" width="358" height="0.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="0.59999999999999998" id="AT4-wS-aLw"/>
-                                                </constraints>
-                                            </view>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="exH-O3-Hje" userLabel="Sale's Collection View">
-                                                <rect key="frame" x="0.0" y="265" width="374" height="158"/>
-                                                <color key="backgroundColor" red="0.070588235294117646" green="0.14901960784313725" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="158" id="XzZ-Re-1eu"/>
-                                                    <constraint firstAttribute="height" constant="158" id="fS8-4a-s3F"/>
-                                                </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wC4-L7-ia1">
-                                                    <size key="itemSize" width="156" height="156"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                </collectionViewFlowLayout>
-                                                <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="saleCell" id="zlV-W0-uDy" customClass="SaleCollectionViewCell" customModule="easyBazi" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="1" width="156" height="156"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="156" height="156"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JId-Hj-8fa">
-                                                                    <rect key="frame" x="16" y="0.0" width="121" height="121"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="121" id="K7W-Mq-NpQ"/>
-                                                                    </constraints>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="God Of War:4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDC-uO-qUd">
-                                                                    <rect key="frame" x="10" y="122" width="128" height="17"/>
-                                                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
-                                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="250.000 تومان" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5X-pw-xID">
-                                                                    <rect key="frame" x="10" y="134" width="136" height="22"/>
-                                                                    <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="13"/>
-                                                                    <color key="textColor" red="1" green="0.3529411764705882" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </view>
-                                                        <color key="backgroundColor" red="0.070588235294117646" green="0.14901960784313725" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailingMargin" secondItem="kDC-uO-qUd" secondAttribute="trailing" constant="10" id="0hB-C2-olw"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Y5X-pw-xID" secondAttribute="trailing" constant="10" id="8S0-JO-eoF"/>
-                                                            <constraint firstItem="kDC-uO-qUd" firstAttribute="leading" secondItem="zlV-W0-uDy" secondAttribute="leadingMargin" constant="2" id="9w9-F8-tSH"/>
-                                                            <constraint firstAttribute="bottom" secondItem="JId-Hj-8fa" secondAttribute="bottom" constant="35" id="IgV-hb-Sao"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Y5X-pw-xID" secondAttribute="trailing" constant="10" id="Y0I-HO-OfB"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Y5X-pw-xID" secondAttribute="bottom" id="ZEA-RT-Qbp"/>
-                                                            <constraint firstItem="JId-Hj-8fa" firstAttribute="leading" secondItem="zlV-W0-uDy" secondAttribute="leading" constant="16" id="eRk-pf-pW9"/>
-                                                            <constraint firstItem="kDC-uO-qUd" firstAttribute="top" secondItem="JId-Hj-8fa" secondAttribute="bottom" constant="1" id="fVW-PN-LJp"/>
-                                                            <constraint firstItem="Y5X-pw-xID" firstAttribute="leading" secondItem="zlV-W0-uDy" secondAttribute="leading" constant="10" id="hTS-vN-xc2"/>
-                                                            <constraint firstItem="kDC-uO-qUd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zlV-W0-uDy" secondAttribute="leadingMargin" id="o6E-KQ-AtB"/>
-                                                            <constraint firstItem="JId-Hj-8fa" firstAttribute="top" secondItem="zlV-W0-uDy" secondAttribute="top" id="ofv-fx-Baf"/>
-                                                        </constraints>
-                                                        <size key="customSize" width="156" height="156"/>
-                                                        <connections>
-                                                            <outlet property="gameImage" destination="JId-Hj-8fa" id="EE8-iv-Wy6"/>
-                                                            <outlet property="gameTitle" destination="kDC-uO-qUd" id="T9L-5k-L1q"/>
-                                                            <outlet property="gameprice" destination="Y5X-pw-xID" id="n3I-oB-dfb"/>
-                                                        </connections>
-                                                    </collectionViewCell>
-                                                </cells>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="K44-em-4PL" id="oCn-Eh-lDd"/>
-                                                    <outlet property="delegate" destination="K44-em-4PL" id="xya-lW-nPO"/>
-                                                </connections>
-                                            </collectionView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.070588235294117646" green="0.14901960784313725" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="iUn-eA-haG" firstAttribute="leading" secondItem="RCY-TX-IKb" secondAttribute="leading" id="0qq-YP-Xkg"/>
-                                            <constraint firstItem="exH-O3-Hje" firstAttribute="leading" secondItem="RCY-TX-IKb" secondAttribute="leading" id="3p6-he-Pyj"/>
-                                            <constraint firstItem="exH-O3-Hje" firstAttribute="top" secondItem="4y4-0g-oKB" secondAttribute="bottom" constant="8" id="827-q5-Ogm"/>
-                                            <constraint firstItem="4y4-0g-oKB" firstAttribute="top" secondItem="uMo-fI-oCe" secondAttribute="bottom" constant="20" id="Awl-N9-wX3"/>
-                                            <constraint firstAttribute="trailing" secondItem="uMo-fI-oCe" secondAttribute="trailing" id="HcQ-vF-W4m"/>
-                                            <constraint firstItem="uMo-fI-oCe" firstAttribute="top" secondItem="RCY-TX-IKb" secondAttribute="top" constant="180" id="IMb-aU-0qA"/>
-                                            <constraint firstAttribute="trailing" secondItem="gTk-zh-hbP" secondAttribute="trailing" constant="16" id="Ihm-x7-DyS"/>
-                                            <constraint firstAttribute="trailing" secondItem="4y4-0g-oKB" secondAttribute="trailing" constant="16" id="K90-gh-ZVN"/>
-                                            <constraint firstAttribute="trailing" secondItem="GLa-g3-TsD" secondAttribute="trailing" id="LyA-rA-7Mb"/>
-                                            <constraint firstItem="exH-O3-Hje" firstAttribute="top" secondItem="DNr-6n-mcx" secondAttribute="bottom" constant="8" id="OAT-zZ-ZdL"/>
-                                            <constraint firstItem="DNr-6n-mcx" firstAttribute="top" secondItem="Y9X-F2-YyI" secondAttribute="bottom" constant="20" id="T04-Ka-ipV"/>
-                                            <constraint firstItem="Y9X-F2-YyI" firstAttribute="top" secondItem="RCY-TX-IKb" secondAttribute="top" id="YH3-eJ-25L"/>
-                                            <constraint firstItem="roX-bD-ULM" firstAttribute="top" secondItem="GLa-g3-TsD" secondAttribute="bottom" constant="4" id="aAo-Re-b0T"/>
-                                            <constraint firstAttribute="trailing" secondItem="exH-O3-Hje" secondAttribute="trailing" id="bgB-B6-bQM"/>
-                                            <constraint firstItem="roX-bD-ULM" firstAttribute="leading" secondItem="RCY-TX-IKb" secondAttribute="leading" id="cuR-l6-1gv"/>
-                                            <constraint firstAttribute="trailing" secondItem="M44-kG-KJK" secondAttribute="trailing" constant="16" id="d2U-uC-Zek"/>
-                                            <constraint firstItem="GLa-g3-TsD" firstAttribute="leading" secondItem="RCY-TX-IKb" secondAttribute="leading" id="elb-1m-Fjy"/>
-                                            <constraint firstItem="ZVF-vG-Uy4" firstAttribute="top" secondItem="GLa-g3-TsD" secondAttribute="bottom" constant="16" id="fRd-d3-2kt"/>
-                                            <constraint firstAttribute="trailing" secondItem="ZVF-vG-Uy4" secondAttribute="trailing" constant="16" id="fdj-V1-POt"/>
-                                            <constraint firstItem="4y4-0g-oKB" firstAttribute="leading" secondItem="RCY-TX-IKb" secondAttribute="leading" constant="16" id="gch-db-Zhf"/>
-                                            <constraint firstItem="M44-kG-KJK" firstAttribute="leading" secondItem="RCY-TX-IKb" secondAttribute="leading" constant="16" id="gkl-Ww-6M3"/>
-                                            <constraint firstItem="Y9X-F2-YyI" firstAttribute="leading" secondItem="RCY-TX-IKb" secondAttribute="leading" id="iul-Fj-zUl"/>
-                                            <constraint firstItem="gTk-zh-hbP" firstAttribute="top" secondItem="exH-O3-Hje" secondAttribute="bottom" constant="4" id="iyU-Hd-TV1"/>
-                                            <constraint firstAttribute="trailing" secondItem="Y9X-F2-YyI" secondAttribute="trailing" id="kQG-Zb-8mZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="roX-bD-ULM" secondAttribute="trailing" constant="16" id="kel-Gb-Es8"/>
-                                            <constraint firstItem="gTk-zh-hbP" firstAttribute="leading" secondItem="RCY-TX-IKb" secondAttribute="leading" id="lXW-RF-dDF"/>
-                                            <constraint firstItem="uMo-fI-oCe" firstAttribute="leading" secondItem="RCY-TX-IKb" secondAttribute="leading" id="mqb-7C-fFV"/>
-                                            <constraint firstItem="iUn-eA-haG" firstAttribute="top" secondItem="ZVF-vG-Uy4" secondAttribute="bottom" constant="8" id="pbr-GH-xlv"/>
-                                            <constraint firstItem="M44-kG-KJK" firstAttribute="top" secondItem="exH-O3-Hje" secondAttribute="bottom" constant="16" id="qJt-NQ-rVa"/>
-                                            <constraint firstItem="GLa-g3-TsD" firstAttribute="top" secondItem="M44-kG-KJK" secondAttribute="bottom" constant="8" id="tS8-EP-L0M"/>
-                                            <constraint firstAttribute="trailing" secondItem="iUn-eA-haG" secondAttribute="trailing" id="u53-Zh-bhN"/>
-                                            <constraint firstItem="ZVF-vG-Uy4" firstAttribute="leading" secondItem="RCY-TX-IKb" secondAttribute="leading" constant="16" id="udu-69-Jr4"/>
-                                            <constraint firstItem="4Yl-dU-B3d" firstAttribute="top" secondItem="exH-O3-Hje" secondAttribute="bottom" constant="16" id="ut0-1l-DWs"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.070588235289999995" green="0.14901960780000001" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="RCY-TX-IKb" firstAttribute="leading" secondItem="nAp-Jd-9O2" secondAttribute="leading" id="5dW-N2-dzK"/>
-                                    <constraint firstItem="RCY-TX-IKb" firstAttribute="width" secondItem="nAp-Jd-9O2" secondAttribute="width" id="To4-X7-hWE"/>
-                                    <constraint firstAttribute="bottom" secondItem="RCY-TX-IKb" secondAttribute="bottom" id="Ww7-DG-b2H"/>
-                                    <constraint firstItem="RCY-TX-IKb" firstAttribute="height" secondItem="nAp-Jd-9O2" secondAttribute="height" priority="250" id="Y5P-pB-yIG"/>
-                                    <constraint firstAttribute="trailing" secondItem="RCY-TX-IKb" secondAttribute="trailing" id="fiR-Fw-sHD"/>
-                                    <constraint firstItem="RCY-TX-IKb" firstAttribute="top" secondItem="nAp-Jd-9O2" secondAttribute="top" id="gBN-2t-RoD"/>
-                                    <constraint firstAttribute="bottom" secondItem="iUn-eA-haG" secondAttribute="bottom" constant="20" id="rdA-79-ke0"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" red="0.070588235294117646" green="0.14901960784313725" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="LsC-XZ-yxB" firstAttribute="trailing" secondItem="nAp-Jd-9O2" secondAttribute="trailing" id="NVw-1H-BE7"/>
-                            <constraint firstItem="LsC-XZ-yxB" firstAttribute="bottom" secondItem="nAp-Jd-9O2" secondAttribute="bottom" id="YZx-kY-7qq"/>
-                            <constraint firstItem="nAp-Jd-9O2" firstAttribute="leading" secondItem="LsC-XZ-yxB" secondAttribute="leading" id="hMZ-7I-vi9"/>
-                            <constraint firstItem="nAp-Jd-9O2" firstAttribute="top" secondItem="LsC-XZ-yxB" secondAttribute="top" id="iBL-Uh-yFC"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LsC-XZ-yxB"/>
                     </view>
                     <navigationItem key="navigationItem" title="خانه" id="h7d-NE-ey1">
@@ -578,21 +224,15 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Za-7W-TG3">
-                                    <rect key="frame" x="109" y="-4" width="140" height="52"/>
+                                    <rect key="frame" x="141.5" y="-15.5" width="75" height="75"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="l5Y-0Y-63h">
-                                            <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="52" id="LHc-MQ-hvR"/>
-                                                <constraint firstAttribute="height" constant="52" id="qC4-Dg-ROf"/>
+                                                <constraint firstAttribute="width" constant="75" id="LHc-MQ-hvR"/>
+                                                <constraint firstAttribute="height" constant="75" id="qC4-Dg-ROf"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy Bazi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCF-HZ-mk9">
-                                            <rect key="frame" x="60" y="0.0" width="80" height="52"/>
-                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                 </stackView>
                             </subviews>
@@ -603,14 +243,6 @@
                         </view>
                     </navigationItem>
                     <size key="freeformSize" width="374" height="1000"/>
-                    <connections>
-                        <outlet property="homeContent" destination="RCY-TX-IKb" id="qDg-cV-X8i"/>
-                        <outlet property="newsCollectionView" destination="iUn-eA-haG" id="Ccd-Ti-7ND"/>
-                        <outlet property="rentCollectionView" destination="GLa-g3-TsD" id="ljb-Yh-TQO"/>
-                        <outlet property="saleCollectionView" destination="exH-O3-Hje" id="Acc-Lv-sgU"/>
-                        <outlet property="slider" destination="Y9X-F2-YyI" id="vb5-Bs-Lb9"/>
-                        <outlet property="sliderController" destination="uMo-fI-oCe" id="8Oh-ZP-cTo"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i6n-yz-w9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -619,16 +251,16 @@
         <!--Rent View Controller-->
         <scene sceneID="pKl-hq-FfF">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="p0s-Lh-FII" customClass="RentViewController" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="p0s-Lh-FII" customClass="RentViewController" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rPN-jB-zcb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="175" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ADM-Gq-zRl">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" red="0.05402778834104538" green="0.087473921477794647" blue="0.12954065203666687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rentCell" rowHeight="175" id="xee-HX-9of" customClass="RentTableViewCell" customModule="easyBazi" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rentCell" rowHeight="175" id="xee-HX-9of" customClass="RentTableViewCell" customModule="Easy_Bazi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xee-HX-9of" id="RbP-Oi-1Ws">
@@ -749,7 +381,7 @@
         <!--جزییات-->
         <scene sceneID="Cga-UP-3JD">
             <objects>
-                <viewController storyboardIdentifier="gameDetails" title="جزییات" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vR9-Vj-fUX" customClass="GameDetails" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gameDetails" title="جزییات" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vR9-Vj-fUX" customClass="GameDetails" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PPK-j9-jjT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="850"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -988,7 +620,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recomandCell" id="fBN-Kb-JWg" customClass="GameDetailsCell" customModule="easyBazi" customModuleProvider="target">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recomandCell" id="fBN-Kb-JWg" customClass="GameDetailsCell" customModule="Easy_Bazi" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="2.5" width="143" height="161"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1139,7 +771,7 @@
         <!--Web View Controller-->
         <scene sceneID="qNI-zo-gUO">
             <objects>
-                <viewController storyboardIdentifier="webView" id="Nf3-Bw-3wI" customClass="WebViewController" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webView" id="Nf3-Bw-3wI" customClass="WebViewController" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k1b-3y-QHA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1154,7 +786,7 @@
         <!--RentVC-->
         <scene sceneID="P7r-f2-LEo">
             <objects>
-                <viewController storyboardIdentifier="rentVC" automaticallyAdjustsScrollViewInsets="NO" id="xDs-FQ-1mS" customClass="RentVC" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rentVC" automaticallyAdjustsScrollViewInsets="NO" id="xDs-FQ-1mS" customClass="RentVC" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CmS-Np-Y29" customClass="ShopVC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1198,7 +830,7 @@
         <!--نظرات-->
         <scene sceneID="FdQ-Ii-Saw">
             <objects>
-                <viewController title="نظرات" id="4eO-Zo-Ear" customClass="CommentsVC" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="نظرات" id="4eO-Zo-Ear" customClass="CommentsVC" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rm8-zs-jzQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1295,7 +927,7 @@
         <!--پروفایل-->
         <scene sceneID="stC-Y3-82e">
             <objects>
-                <viewController id="e7A-9Q-Org" customClass="ProfileController" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="e7A-9Q-Org" customClass="ProfileController" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wT3-RZ-LoQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="662"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1304,17 +936,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="613"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXF-WK-DOd">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="738"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="ORb-GE-43k">
-                                                <rect key="frame" x="134" y="6" width="52" height="52"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" image="logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="ORb-GE-43k">
+                                                <rect key="frame" x="120" y="6" width="80" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="52" id="V2Y-fu-2Gt"/>
-                                                    <constraint firstAttribute="height" constant="52" id="nOZ-KG-s9b"/>
+                                                    <constraint firstAttribute="width" constant="80" id="V2Y-fu-2Gt"/>
+                                                    <constraint firstAttribute="height" constant="90" id="nOZ-KG-s9b"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAl-Wd-Xca">
-                                                <rect key="frame" x="16" y="111.5" width="288" height="230"/>
+                                                <rect key="frame" x="16" y="149.5" width="288" height="230"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ali arabgary" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jw-BH-pIU">
                                                         <rect key="frame" x="8" y="8" width="80.5" height="25"/>
@@ -1468,7 +1100,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpD-5L-KAU">
-                                                <rect key="frame" x="16" y="376.5" width="288" height="200"/>
+                                                <rect key="frame" x="16" y="414.5" width="288" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ما را در شبکه های اجتماعی دنبال کنید" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA6-xv-iS2">
                                                         <rect key="frame" x="75" y="16" width="205" height="20"/>
@@ -1557,7 +1189,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ny-fI-bWQ">
-                                                <rect key="frame" x="93" y="344.5" width="134" height="31"/>
+                                                <rect key="frame" x="93" y="382.5" width="134" height="31"/>
                                                 <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="11"/>
                                                 <state key="normal" title="رمز عبور را فراموش کرده ام ">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1566,8 +1198,8 @@
                                                     <action selector="forgetPassButton:" destination="e7A-9Q-Org" eventType="touchUpInside" id="f5u-3J-xEQ"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بخرید٬کرایه کنید ٬در محل رایگان تحویل بگیرید." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRI-iF-fYz">
-                                                <rect key="frame" x="45" y="89" width="230" height="18.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="بخرید٬در محل رایگان تحویل بگیرید." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRI-iF-fYz">
+                                                <rect key="frame" x="72" y="127" width="176.5" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="IRANSans" family="IRANSans" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1592,7 +1224,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ایزی بازی" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clJ-k7-dFw">
-                                        <rect key="frame" x="129" y="60" width="62.5" height="25"/>
+                                        <rect key="frame" x="129" y="98" width="62.5" height="25"/>
                                         <fontDescription key="fontDescription" name="IRANSans-Bold" family="IRANSans" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1653,7 +1285,7 @@
         <!--SupportVC-->
         <scene sceneID="O6k-qi-NYo">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="rmz-tZ-8Dv" customClass="SupportVC" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="rmz-tZ-8Dv" customClass="SupportVC" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yyF-HJ-iDw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1822,7 +1454,7 @@
         <!--ShopVC-->
         <scene sceneID="I7i-ln-sq6">
             <objects>
-                <viewController storyboardIdentifier="shopVC" automaticallyAdjustsScrollViewInsets="NO" id="l1s-bp-e9D" customClass="ShopVC" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="shopVC" automaticallyAdjustsScrollViewInsets="NO" id="l1s-bp-e9D" customClass="ShopVC" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AID-LC-cJP" customClass="ShopVC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1866,7 +1498,7 @@
         <!--تمدید بازی-->
         <scene sceneID="mnA-pC-a8f">
             <objects>
-                <viewController storyboardIdentifier="renewalVC" title="تمدید بازی" automaticallyAdjustsScrollViewInsets="NO" id="LrJ-Z0-FyM" customClass="RenewalViewController" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="renewalVC" title="تمدید بازی" automaticallyAdjustsScrollViewInsets="NO" id="LrJ-Z0-FyM" customClass="RenewalViewController" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aUm-WB-MvV" customClass="ShopVC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1929,7 +1561,7 @@
         <!-- تکمیل اطلاعات ثبت نام-->
         <scene sceneID="198-k0-gQ0">
             <objects>
-                <viewController storyboardIdentifier="signupDetailesVC" title=" تکمیل اطلاعات ثبت نام" automaticallyAdjustsScrollViewInsets="NO" id="gXk-kL-teP" customClass="SignupDetailesViewController" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signupDetailesVC" title=" تکمیل اطلاعات ثبت نام" automaticallyAdjustsScrollViewInsets="NO" id="gXk-kL-teP" customClass="SignupDetailesViewController" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HMn-4o-8mX" customClass="ShopVC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1974,7 +1606,7 @@
         <!--تایید شماره موبایل-->
         <scene sceneID="1ll-of-LCK">
             <objects>
-                <viewController storyboardIdentifier="signupVerificationVC" title="تایید شماره موبایل" hidesBottomBarWhenPushed="YES" id="PnH-kN-qnY" customClass="VerificationViewController" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signupVerificationVC" title="تایید شماره موبایل" hidesBottomBarWhenPushed="YES" id="PnH-kN-qnY" customClass="VerificationViewController" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="akO-LC-doz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1990,7 +1622,7 @@
         <!--New Password View Controller-->
         <scene sceneID="TWH-Ob-Bji">
             <objects>
-                <viewController storyboardIdentifier="newPasswordVC" automaticallyAdjustsScrollViewInsets="NO" id="5Re-bE-xOO" customClass="NewPasswordViewController" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newPasswordVC" automaticallyAdjustsScrollViewInsets="NO" id="5Re-bE-xOO" customClass="NewPasswordViewController" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="35H-25-3Ja" customClass="ShopVC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2035,7 +1667,7 @@
         <!--Reckogning View Controller-->
         <scene sceneID="ERr-p4-REL">
             <objects>
-                <viewController storyboardIdentifier="reckogningVC" title="Reckogning View Controller" automaticallyAdjustsScrollViewInsets="NO" id="gzw-ZH-k96" customClass="ReckogningViewController" customModule="easyBazi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="reckogningVC" title="Reckogning View Controller" automaticallyAdjustsScrollViewInsets="NO" id="gzw-ZH-k96" customClass="ReckogningViewController" customModule="Easy_Bazi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cgn-5E-qEt" customClass="ShopVC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2079,7 +1711,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="5" width="360" height="225"/>
         <image name="7" width="360" height="225"/>
         <image name="GOW" width="200" height="252"/>
         <image name="blue-wallet" width="512" height="512"/>
@@ -2087,7 +1718,7 @@
         <image name="home" width="24" height="24"/>
         <image name="instagram" width="512" height="512"/>
         <image name="law" width="512" height="512"/>
-        <image name="logo-1" width="512" height="512"/>
+        <image name="logo-1" width="1024" height="1024"/>
         <image name="logout" width="512" height="512"/>
         <image name="ps" width="64" height="64"/>
         <image name="search" width="24" height="24"/>

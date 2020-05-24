@@ -19,14 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     rentType(id: 3, day_count: 15, price_percent: 13),
     rentType(id: 4, day_count: 30, price_percent: 20),
     ]
-    var htmls:[html]!
     internal func makeCircular(_ view:UIView){
         view.layer.masksToBounds = true
         view.layer.cornerRadius = view.frame.height/5
         view.clipsToBounds = true
     }
-    var contents:String!
-    var baseUrl:URL!
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -40,8 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor.easyBaziTheme
         UITabBar.appearance().backgroundColor = UIColor.navAndTabColor
         
-//        let attr = NSDictionary(object: UIFont(name: "IRANSans", size: 14)!, forKey: NSAttributedStringKey.font as NSCopying)
-//        UISegmentedControl.appearance().setTitleTextAttributes(attr as [NSObject : AnyObject] , for: .normal)
+//      let attr = NSDictionary(object: UIFont(name: "IRANSans", size: 14)!, forKey: NSAttributedStringKey.font as NSCopying)
+//      UISegmentedControl.appearance().setTitleTextAttributes(attr as [NSObject : AnyObject] , for: .normal)
         UISearchBar.appearance().tintColor = UIColor.easyBaziTheme
         UISearchBar.appearance().semanticContentAttribute = .forceRightToLeft
         UITextField.appearance().semanticContentAttribute = .forceRightToLeft
@@ -50,16 +48,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "IRANSans", size: 13) as Any], for    : .selected)
         UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 8, vertical: -1)
         
-        let defaults = UserDefaults.standard
-        if defaults.object(forKey: "isFirstTime") != nil {
-            print("Intro vc showing now...")
-            defaults.set("No", forKey:"isFirstTime")
-                window = UIWindow()
-                window?.makeKeyAndVisible()
-                let layout = UICollectionViewFlowLayout()
-                layout.scrollDirection = .horizontal
-                window?.rootViewController = SwipingController(collectionViewLayout:layout)
-          }
+        //add intro pages to app here
+//
+//        let defaults = UserDefaults.standard
+//        if defaults.object(forKey: "isFirstTime") == nil {
+//            print("Intro vc showing now...")
+//            defaults.set("No", forKey:"isFirstTime")
+//                window = UIWindow()
+//                window?.makeKeyAndVisible()
+//                let layout = UICollectionViewFlowLayout()
+//                layout.scrollDirection = .horizontal
+//                window?.rootViewController = SwipingController(collectionViewLayout:layout)
+//          }
         
         return true
     }

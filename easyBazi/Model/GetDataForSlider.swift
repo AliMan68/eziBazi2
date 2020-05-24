@@ -6,7 +6,7 @@
 //  Copyright © 2018 AliArabgary. All rights reserved.
 //
 
-import Foundation
+import UIKit
 struct SliderObject: Decodable{
     var status : Int!
     var message:String?
@@ -22,8 +22,10 @@ struct SliderDataObject:Decodable{
 }
 
 class GetDataForSlider {
-    static func getData(_ Url:String,completion:@escaping (Array<SliderDataObject>,Int)-> Void){
-        var request = URLRequest(url: URL(string:Url )!)
+    static func getData(completion:@escaping (Array<SliderDataObject>,Int)-> Void){
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let slideUrl:String = "\(delegate.url)/api/slider"
+        var request = URLRequest(url: URL(string:slideUrl )!)
         request.httpMethod = "GET"
         var gameArray = [SliderDataObject]()
         var status:Int!

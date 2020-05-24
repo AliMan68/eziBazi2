@@ -51,7 +51,7 @@ class ActivityViewController: UIViewController,UICollectionViewDataSource,UIColl
     var activityRentCV = "ActivityRentCV"
     var activityBuyCV = "activityBuyCV"
     static var tabBarHeight:CGFloat?
-    var sections:[String] = ["rented","buyed"]
+    var sections:[String] = ["buyed"]
     var rentTypes:[rentType]? = []
     //declear Activity Menu here
     
@@ -114,7 +114,7 @@ class ActivityViewController: UIViewController,UICollectionViewDataSource,UIColl
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let temp:UICollectionViewCell!
-        if indexPath.item == 1 {
+        if indexPath.item == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: activityBuyCV, for: indexPath) as! ActivityBuyCV
             temp = cell
         }else{
@@ -174,8 +174,10 @@ class ActivityViewController: UIViewController,UICollectionViewDataSource,UIColl
 }
 //declear a base cell for better handling cells
 class baseCell : UICollectionViewCell{
+    var font:UIFont!
     override init(frame: CGRect) {
         super.init(frame: frame)
+        font = UIFont(name: "IRANSans", size: 15)
         setupViews()
         fetchData()
         observer()

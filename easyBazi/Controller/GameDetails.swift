@@ -339,7 +339,8 @@ class GameDetails: UIViewController {
         rentPeriod.layer.borderWidth = 0.5
         rentPeriod.layer.borderColor = UIColor.easyBaziThemeAlphaHalf.cgColor
 //        getRentTypes()
-        title = game.game_info.name
+        tabBarController?.tabBar.isTranslucent = true
+        title = game.game_info.name?.uppercased()
         if isForRent{
         rentPeriod.removeAllSegments()
         configeSegmentControl(rentTypes)
@@ -374,7 +375,7 @@ class GameDetails: UIViewController {
         var genreText:String = ""
         extactGenres(&genreText)//get genres from game object
         if game.count == 0{
-            gameName.text = game.game_info.name
+            gameName.text = game.game_info.name!.uppercased()
             timeLabel.isHidden = true
             gamePrice.backgroundColor = UIColor.notAvailable
             gamePrice.setTitle(" ناموجود ", for: .normal)
@@ -389,9 +390,9 @@ class GameDetails: UIViewController {
             
             rentPeriod.isHidden = true
             
-            gameRegion.text = "Region : \(String(describing: game.region))"
+            gameRegion.text = "REGION : \(String(describing: game.region))"
             
-            gameGenres.text = "Genres : \(genreText)"
+            gameGenres.text = "GENRES : \(genreText)"
             if game.game_info.console?.name == "ps1" || game.game_info.console?.name == "ps4" || game.game_info.console?.name == "ps2"{
                 gameConsole.image = UIImage(named:"ps")
             }else{
@@ -404,7 +405,7 @@ class GameDetails: UIViewController {
             gameReleaseYear.text = String(date![...idx])
             
         }else if gameIsforRent{
-            gameName.text = game.game_info.name
+            gameName.text = game.game_info.name!.uppercased()
             timeLabel.isHidden = false
             gamePrice.backgroundColor = UIColor.easyBaziGreen
             if game.game_info.photos.count != 0{//set image here
@@ -414,14 +415,14 @@ class GameDetails: UIViewController {
                    gameImage.image = UIImage(named:"GOW")
                }
             
-            gameName.text = game.game_info.name
+            gameName.text = game.game_info.name!.uppercased()
             if rentPeriod.selectedSegmentIndex == 0 {
                 let price = (Int(game.price)/1500).formattedWithSeparator
                 gamePrice.setTitle("کرایه با مبلغ " + convertToPersian(inputStr: "\(String(describing: price))") + " تومان ", for: .normal)
             }
             
-            gameRegion.text = "Region : \(String(describing: game.region))"
-            gameGenres.text = "Genres : \(genreText)"
+            gameRegion.text = "REGION : \(String(describing: game.region))"
+            gameGenres.text = "GENRES : \(genreText)"
             if game.game_info.console?.name == "ps1" || game.game_info.console?.name == "ps4" || game.game_info.console?.name == "ps2"{
                 gameConsole.image = UIImage(named:"ps")
             }else{
@@ -434,7 +435,7 @@ class GameDetails: UIViewController {
       
         }else if !gameIsforRent{
             timeLabel.isHidden = true
-            gameName.text = game.game_info.name
+            gameName.text = game.game_info.name!.uppercased()
             gamePrice.backgroundColor = UIColor.easyBaziGreen
             gamePrice.setTitle("خرید با " + convertToPersian(inputStr: "\(String(describing: Int(game.price).formattedWithSeparator))") + " تومان ", for: .normal)
 
@@ -448,8 +449,8 @@ class GameDetails: UIViewController {
             
             
             rentPeriod.isHidden = true
-            gameRegion.text = "Region : \(String(describing: game.region))"
-            gameGenres.text = "Genres : \(genreText)"
+            gameRegion.text = "REGION : \(String(describing: game.region))"
+            gameGenres.text = "GENRES : \(genreText)"
             if game.game_info.console?.name == "ps1" || game.game_info.console?.name == "ps4" || game.game_info.console?.name == "ps2"{
                 gameConsole.image = UIImage(named:"ps")
             }else{gameConsole.image = UIImage(named:"xbox")
@@ -496,7 +497,7 @@ extension GameDetails:UICollectionViewDelegate,UICollectionViewDataSource{
             detailesCell?.gameImage.image = UIImage(named:"GOW")
         }
         
-        detailesCell?.gameName.text = relatedGames[indexPath.row].game_info.name
+        detailesCell?.gameName.text = relatedGames[indexPath.row].game_info.name?.uppercased()
        
         if gameIsforRent {//check for show weekly or not
             if relatedGames[indexPath.row].count == 0{

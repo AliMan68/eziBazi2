@@ -133,10 +133,10 @@ class ProfileController: UIViewController,UITextFieldDelegate,SFSafariViewContro
     @IBAction func forgetPassButton(_ sender: UIButton) {
         forgetPass.show()
     }
-    
+               
     let alternativeView:UIView = {
       var view = UIView()
-        view.backgroundColor = UIColor.navAndTabColor
+        view.backgroundColor = UIColor(red: 14/255, green: 22/255, blue: 33/255, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 10
         return view
@@ -382,26 +382,28 @@ class ProfileController: UIViewController,UITextFieldDelegate,SFSafariViewContro
         firstView.layer.cornerRadius = 6
         secondView.layer.cornerRadius = 6
         view.backgroundColor = .gray
+        print("first view \(firstView.isHidden)")
+        print("alternative view \(alternativeView.isHidden)")
         if getToken() != ""{
+            
             if getFullName() != ""{
+                print("1")
                 fullName.text = getFullName()
                 alternativeView.isHidden = true
             }
         }else{
-//            reckogningBtn.isHidden = true
-            firstView.isHidden = true
+            print("2")
+            alternativeView.isHidden = false
             mainButton.backgroundColor = UIColor.easyBaziGreen
             }
+        print("first view 2 \(firstView.isHidden)")
+        print("alternative view 2 \(alternativeView.isHidden)")
         }
     
     func setupCounter(){
         
     }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-//        ReachabilityManager.shared.removeListener(listener: self)
-    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -411,6 +413,7 @@ class ProfileController: UIViewController,UITextFieldDelegate,SFSafariViewContro
         }
 //        ReachabilityManager.shared.addListener(listener: self)
         if getToken() != ""{
+            print("here we are profile VC")
             isSingedIn = true
             forgetButton.isHidden = true
             reckogningBtn.isHidden = false

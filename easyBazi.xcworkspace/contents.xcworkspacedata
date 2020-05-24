@@ -8,6 +8,6 @@
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:easyBazi.xcodeproj">
+      location = "group:/Users/aliarabgary/Desktop/eziBazi2/Easy Bazi.xcodeproj">
    </FileRef>
 </Workspace>

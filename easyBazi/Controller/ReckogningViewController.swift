@@ -310,15 +310,15 @@ class ReckogningViewController: UIViewController,UITextFieldDelegate {
             SVProgressHUD.setDefaultMaskType(.gradient)
             SVProgressHUD.setFont(UIFont(name: "IRANSans", size: 13)!)
             SVProgressHUD.show(withStatus: "در حال انجام ...")
-            Reckogning.request(accountOwner: fullNameInput.text!, cardNumber: cardNumberInput.text!, accountNumber: accountNumberInput.text!, shbaNumber: shbaNumberInput.text!, vToken: token, mobileNumber: getUserPhoneNumber(), token: getToken()) { (status, message) in
+            Reckogning.request(accountOwner: fullNameInput.text!, cardNumber: cardNumberInput.text!, accountNumber: accountNumberInput.text!, shbaNumber: shbaNumberInput.text!, vToken: token, mobileNumber: getUserPhoneNumber(), token: getToken()) {(status, message) in
                 if status == 1{
                     SVProgressHUD.showSuccess(withStatus: message)
                     SVProgressHUD.dismiss(withDelay: 2)
                     self.navigationController?.popToRootViewController(animated: true)
                 }else{
                     SVProgressHUD.showSuccess(withStatus: message)
-                    SVProgressHUD.dismiss(withDelay: 2)
-                    self.navigationController?.popToRootViewController(animated: true)
+                    SVProgressHUD.dismiss(withDelay: 3)
+//                    self.navigationController?.popToRootViewController(animated: true)
                 }
             }
         }

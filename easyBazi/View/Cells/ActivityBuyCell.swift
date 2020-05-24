@@ -19,11 +19,11 @@ class ActivityBuyCell: baseCell {
                 gameImage.image = UIImage(named:"notFound")
             }
             
-            gameName.text = game.game_for_shop.game_info.name
+            gameName.text = game.game_for_shop.game_info.name!.uppercased()
             gamePrice.text = convertToPersian(inputStr: String(describing: Int(game.game_for_shop.price).formattedWithSeparator)) + " تومان"
             statusImage.image = UIImage(named: "GOW")
 
-            gameRegion.text = "Region : " + game.game_for_shop.region
+            gameRegion.text = "REGION : " + game.game_for_shop.region
             shopDate.text = " تاریخ خرید : " + (UIApplication.shared.delegate as! AppDelegate).dateConvertor(from: game.created_at)
                        
                        

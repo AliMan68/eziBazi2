@@ -20,7 +20,7 @@ class IntroCell: UICollectionViewCell {
        let imageView:UIImageView = {
            let iv = UIImageView(image: UIImage(named: "logo-1"))
             iv.translatesAutoresizingMaskIntoConstraints = false
-            iv.backgroundColor = UIColor.white
+            iv.backgroundColor = UIColor.clear
             iv.contentMode = .scaleAspectFit
             return iv
         }()
@@ -35,11 +35,12 @@ class IntroCell: UICollectionViewCell {
     let title:UITextView = {
       let tv = UITextView()
         tv.translatesAutoresizingMaskIntoConstraints = false
-        tv.font = UIFont(name: "IRANSans", size: 17)!
+        tv.font = UIFont(name: "IRANSans", size: 20)!
 //        var attribute = NSMutableAttributedString(string: "ارسال رایگان", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white,NSAttributedStringKey.font : UIFont(name: "IRANSans", size: 17)!])
 //        attribute.append(NSAttributedString(string: "\n\nبزرگترین پلتفرم خرید و فروش یازی های کنسولی ", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white, NSAttributedStringKey.font:UIFont(name: "IRANSans", size: 15)!]))
 //        tv.attributedText = attribute
         tv.backgroundColor = .clear
+        tv.textColor = .white
         tv.isEditable = false
         tv.textAlignment = .center
         tv.isScrollEnabled = false
@@ -49,6 +50,7 @@ class IntroCell: UICollectionViewCell {
       let tv = UITextView()
         tv.font = UIFont(name: "IRANSans", size: 17)!
         tv.translatesAutoresizingMaskIntoConstraints = false
+        tv.textColor = .white
 //        var attribute = NSMutableAttributedString(string: "ارسال رایگان", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white,NSAttributedStringKey.font : UIFont(name: "IRANSans", size: 17)!])
 //        attribute.append(NSAttributedString(string: "\n\nبزرگترین پلتفرم خرید و فروش یازی های کنسولی ", attributes: [NSAttributedStringKey.foregroundColor : UIColor.white, NSAttributedStringKey.font:UIFont(name: "IRANSans", size: 15)!]))
 //        tv.attributedText = attribute
@@ -81,7 +83,6 @@ class IntroCell: UICollectionViewCell {
         explanation.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 16).isActive = true
         explanation.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
         explanation.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
-        explanation.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16).isActive = true
     }
     fileprivate func setupTopContainerConstraint(){
         topContainer.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -100,12 +101,10 @@ class IntroCell: UICollectionViewCell {
         
         addSubview(imageView)
         imageView.centerXAnchor.constraint(equalTo: topContainer.centerXAnchor).isActive = true
-        webViewWidth = imageView.widthAnchor.constraint(equalTo: topContainer.widthAnchor, multiplier: 1/2)
+        imageViewWidth = imageView.widthAnchor.constraint(equalTo: topContainer.widthAnchor, multiplier: 1/2)
         imageView.heightAnchor.constraint(equalTo: topContainer.heightAnchor, multiplier: 1/2).isActive = true
         imageView.centerYAnchor.constraint(equalTo: topContainer.centerYAnchor).isActive = true
-        webViewWidth.isActive = false
-        print("we are here")
-//        imageView.topAnchor.constraint(equalTo: topAnchor, constant: 100).isActive = true
+        imageViewWidth.isActive = false
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -51,13 +51,10 @@
 		5DBBFBE5214A99580037BFF6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBBFBE4214A99580037BFF6 /* HomeViewController.swift */; };
 		5DBBFBE8214A99580037BFF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBBFBE6214A99580037BFF6 /* Main.storyboard */; };
 		5DBBFBEA214A99580037BFF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DBBFBE9214A99580037BFF6 /* Assets.xcassets */; };
-		5DBBFBED214A99580037BFF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBBFBEB214A99580037BFF6 /* LaunchScreen.storyboard */; };
 		5DBE570122494C7700BFE4A5 /* ActivityMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE570022494C7700BFE4A5 /* ActivityMenu.swift */; };
 		5DC05178222FCC00002EE2F6 /* IRAN_Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D70CB7F215142A9001D4C12 /* IRAN_Sans.ttf */; };
 		5DC190F72151279200B08D9E /* SaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC190F62151279200B08D9E /* SaleCollectionViewCell.swift */; };
 		5DE4A87B217DDCDF00F03635 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4A87A217DDCDB00F03635 /* Comment.swift */; };
-		5DE563C4216C9E6300636D13 /* spinnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE563C2216C9E6300636D13 /* spinnerCell.swift */; };
-		5DE563C5216C9E6300636D13 /* spinnerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DE563C3216C9E6300636D13 /* spinnerCell.xib */; };
 		5DEA3F07221C25EE0045E13E /* BottomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA3F06221C25EE0045E13E /* BottomList.swift */; };
 		5DEA3F09221C263B0045E13E /* StateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA3F08221C263B0045E13E /* StateCell.swift */; };
 		5DEA3F0C221C2F2A0045E13E /* Custom Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA3F0B221C2F2A0045E13E /* Custom Color.swift */; };
@@ -77,6 +74,9 @@
 		623B607723C5FA3A00051836 /* RentTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623B607623C5FA3A00051836 /* RentTypes.swift */; };
 		623FBBEC22A6808700573A32 /* commentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623FBBEB22A6808700573A32 /* commentCell.swift */; };
 		6247E48422C811BB00EDCFF9 /* IRAN_Sans_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6247E48322C80DDE00EDCFF9 /* IRAN_Sans_Bold.ttf */; };
+		62497C762473C318001CAD1D /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62497C752473C318001CAD1D /* ContentCell.swift */; };
+		62497C782473D7C6001CAD1D /* SaleCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62497C772473D7C6001CAD1D /* SaleCellCell.swift */; };
+		625A842D24715FBA00C4AF2D /* SliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625A842C24715FBA00C4AF2D /* SliderCell.swift */; };
 		625C500D23C8B332005C1B8C /* RentEpay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C500C23C8B332005C1B8C /* RentEpay.swift */; };
 		625FB35C23CC874500F69347 /* increaseAccountBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625FB35B23CC874500F69347 /* increaseAccountBalance.swift */; };
 		6269576E23D2FA6800B800A6 /* IncreaseCredit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6269576D23D2FA6800B800A6 /* IncreaseCredit.swift */; };
@@ -90,10 +90,9 @@
 		62721DB12413AD6800B66AB0 /* Reckogning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62721DB02413AD6800B66AB0 /* Reckogning.swift */; };
 		62721DB32413B14D00B66AB0 /* ReckogningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62721DB22413B14D00B66AB0 /* ReckogningViewController.swift */; };
 		627423B2240A69BC000B7232 /* GetVerificationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627423B1240A69BC000B7232 /* GetVerificationCode.swift */; };
-		627BE6472433882B00FC8696 /* save_money.svg in Resources */ = {isa = PBXBuildFile; fileRef = 627BE6452433882A00FC8696 /* save_money.svg */; };
-		627BE6482433882B00FC8696 /* motorcycle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 627BE6462433882A00FC8696 /* motorcycle.svg */; };
 		6286CD7023CC72B900B3FD1A /* SearchPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6286CD6F23CC72B900B3FD1A /* SearchPostCell.swift */; };
 		6288C3E222AA8407000DB3EC /* Reckoning View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6288C3E122AA8407000DB3EC /* Reckoning View.swift */; };
+		629530C8247AD60000FA4B49 /* 1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 629530C7247AD60000FA4B49 /* 1024.png */; };
 		62AA831C23C8D782004E6F6C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AA831B23C8D782004E6F6C /* Address.swift */; };
 		62AA831E23C8E194004E6F6C /* RentGameEpay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AA831D23C8E194004E6F6C /* RentGameEpay.swift */; };
 		62AA832023C8F7C6004E6F6C /* ShopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AA831F23C8F7C6004E6F6C /* ShopVC.swift */; };
@@ -104,9 +103,12 @@
 		62AA832A23C909F7004E6F6C /* GameShopWithEpay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AA832923C909F7004E6F6C /* GameShopWithEpay.swift */; };
 		62B204AE22AE64DF0015998E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B204AD22AE64DF0015998E /* WebViewController.swift */; };
 		62BBB1A623D9AA7400277865 /* RenewalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BBB1A523D9AA7400277865 /* RenewalViewController.swift */; };
+		62D2FAF2247174AB003AB664 /* SaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D2FAF1247174AB003AB664 /* SaleCell.swift */; };
+		62DBA0F8247AD313005E2197 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DBA0F7247AD313005E2197 /* Launch Screen.storyboard */; };
 		62DE9C2323D087BA0033C981 /* ShopGameWithWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DE9C2223D087BA0033C981 /* ShopGameWithWallet.swift */; };
 		62DE9C2523D089120033C981 /* ShopWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DE9C2423D089120033C981 /* ShopWallet.swift */; };
 		62E57CEC23CB3BBC00316384 /* SearchShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E57CEB23CB3BBC00316384 /* SearchShopCell.swift */; };
+		62E5A11A2475236400858821 /* ContentCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E5A1192475236400858821 /* ContentCellCell.swift */; };
 		62FB2FD0240FC930004B8B53 /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FB2FCF240FC930004B8B53 /* ResetPassword.swift */; };
 		62FB2FD2240FCED3004B8B53 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FB2FD1240FCED3004B8B53 /* NewPasswordViewController.swift */; };
 		B78E114B96EDD8F584CB6B98 /* libPods-easyBazi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE36B14DB90CADF37239F1A /* libPods-easyBazi.a */; };
@@ -160,18 +162,15 @@
 		5DA3E6EE224BA93A00D4BC7F /* ActivityBuyCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityBuyCV.swift; sourceTree = "<group>"; };
 		5DA3E6F0224BD3FB00D4BC7F /* circleWithProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleWithProgress.swift; sourceTree = "<group>"; };
 		5DA83E2C222FDD3300692F63 /* Comment View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comment View.swift"; sourceTree = "<group>"; };
-		5DBBFBDF214A99580037BFF6 /* easyBazi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easyBazi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DBBFBDF214A99580037BFF6 /* Easy Bazi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Bazi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBBFBE2214A99580037BFF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DBBFBE4214A99580037BFF6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5DBBFBE7214A99580037BFF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DBBFBE9214A99580037BFF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5DBBFBEC214A99580037BFF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DBBFBEE214A99580037BFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DBE570022494C7700BFE4A5 /* ActivityMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMenu.swift; sourceTree = "<group>"; };
 		5DC190F62151279200B08D9E /* SaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleCollectionViewCell.swift; sourceTree = "<group>"; };
 		5DE4A87A217DDCDB00F03635 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		5DE563C2216C9E6300636D13 /* spinnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spinnerCell.swift; sourceTree = "<group>"; };
-		5DE563C3216C9E6300636D13 /* spinnerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = spinnerCell.xib; sourceTree = "<group>"; };
 		5DEA3F06221C25EE0045E13E /* BottomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomList.swift; sourceTree = "<group>"; };
 		5DEA3F08221C263B0045E13E /* StateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateCell.swift; sourceTree = "<group>"; };
 		5DEA3F0B221C2F2A0045E13E /* Custom Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Color.swift"; sourceTree = "<group>"; };
@@ -191,6 +190,9 @@
 		623B607623C5FA3A00051836 /* RentTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentTypes.swift; sourceTree = "<group>"; };
 		623FBBEB22A6808700573A32 /* commentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentCell.swift; sourceTree = "<group>"; };
 		6247E48322C80DDE00EDCFF9 /* IRAN_Sans_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRAN_Sans_Bold.ttf; sourceTree = "<group>"; };
+		62497C752473C318001CAD1D /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
+		62497C772473D7C6001CAD1D /* SaleCellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleCellCell.swift; sourceTree = "<group>"; };
+		625A842C24715FBA00C4AF2D /* SliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCell.swift; sourceTree = "<group>"; };
 		625C500C23C8B332005C1B8C /* RentEpay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentEpay.swift; sourceTree = "<group>"; };
 		625FB35B23CC874500F69347 /* increaseAccountBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = increaseAccountBalance.swift; sourceTree = "<group>"; };
 		6269576D23D2FA6800B800A6 /* IncreaseCredit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreaseCredit.swift; sourceTree = "<group>"; };
@@ -204,11 +206,10 @@
 		62721DB02413AD6800B66AB0 /* Reckogning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reckogning.swift; sourceTree = "<group>"; };
 		62721DB22413B14D00B66AB0 /* ReckogningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReckogningViewController.swift; sourceTree = "<group>"; };
 		627423B1240A69BC000B7232 /* GetVerificationCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVerificationCode.swift; sourceTree = "<group>"; };
-		627BE6452433882A00FC8696 /* save_money.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = save_money.svg; sourceTree = "<group>"; };
-		627BE6462433882A00FC8696 /* motorcycle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = motorcycle.svg; sourceTree = "<group>"; };
 		6286CD6F23CC72B900B3FD1A /* SearchPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPostCell.swift; sourceTree = "<group>"; };
 		62872523240E5BE200BC2D0D /* libKWVerificationCodeView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libKWVerificationCodeView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6288C3E122AA8407000DB3EC /* Reckoning View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reckoning View.swift"; sourceTree = "<group>"; };
+		629530C7247AD60000FA4B49 /* 1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1024.png; sourceTree = "<group>"; };
 		62AA831B23C8D782004E6F6C /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		62AA831D23C8E194004E6F6C /* RentGameEpay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentGameEpay.swift; sourceTree = "<group>"; };
 		62AA831F23C8F7C6004E6F6C /* ShopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopVC.swift; sourceTree = "<group>"; };
@@ -219,9 +220,12 @@
 		62AA832923C909F7004E6F6C /* GameShopWithEpay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameShopWithEpay.swift; sourceTree = "<group>"; };
 		62B204AD22AE64DF0015998E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		62BBB1A523D9AA7400277865 /* RenewalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewalViewController.swift; sourceTree = "<group>"; };
+		62D2FAF1247174AB003AB664 /* SaleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleCell.swift; sourceTree = "<group>"; };
+		62DBA0F7247AD313005E2197 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		62DE9C2223D087BA0033C981 /* ShopGameWithWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopGameWithWallet.swift; sourceTree = "<group>"; };
 		62DE9C2423D089120033C981 /* ShopWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopWallet.swift; sourceTree = "<group>"; };
 		62E57CEB23CB3BBC00316384 /* SearchShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchShopCell.swift; sourceTree = "<group>"; };
+		62E5A1192475236400858821 /* ContentCellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCellCell.swift; sourceTree = "<group>"; };
 		62FB2FCF240FC930004B8B53 /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		62FB2FD1240FCED3004B8B53 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		E3F2B35502215D400C57F900 /* Pods-easyBazi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyBazi.debug.xcconfig"; path = "Target Support Files/Pods-easyBazi/Pods-easyBazi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -309,7 +313,7 @@
 				5DA3E6F0224BD3FB00D4BC7F /* circleWithProgress.swift */,
 				5DBBFBE6214A99580037BFF6 /* Main.storyboard */,
 				6288C3E122AA8407000DB3EC /* Reckoning View.swift */,
-				5DBBFBEB214A99580037BFF6 /* LaunchScreen.storyboard */,
+				62DBA0F7247AD313005E2197 /* Launch Screen.storyboard */,
 				5D4ECE352168CBBB001A7DE6 /* Cells */,
 				5D4ECE332168BCED001A7DE6 /* SearchFooter.swift */,
 				5DEA3F06221C25EE0045E13E /* BottomList.swift */,
@@ -363,12 +367,10 @@
 				5D1BDD07215B8E01006741CF /* RentTableViewCell.swift */,
 				5DF15B46215BB45C00484A77 /* saleTableViewCell.swift */,
 				5D4ECE362168CBFA001A7DE6 /* SearchCell.swift */,
-				5DE563C2216C9E6300636D13 /* spinnerCell.swift */,
-				5DE563C3216C9E6300636D13 /* spinnerCell.xib */,
 				5DFD8A79216DDCC100BF6995 /* PostCell.swift */,
-				5D2A81782171F1B3006D2D24 /* GameDetailsCell.swift */,
 				5D40550D218891DF006ADE71 /* MessageCell.swift */,
 				5DF7AE782198A334004407F0 /* ActivityRentCell.swift */,
+				5D2A81782171F1B3006D2D24 /* GameDetailsCell.swift */,
 				5DF7AE7A2198A34D004407F0 /* ActivityBuyCell.swift */,
 				5DEA3F08221C263B0045E13E /* StateCell.swift */,
 				5D8DBF78222E7AC8006D1CF3 /* CityCell.swift */,
@@ -378,6 +380,11 @@
 				623FBBEB22A6808700573A32 /* commentCell.swift */,
 				62E57CEB23CB3BBC00316384 /* SearchShopCell.swift */,
 				6286CD6F23CC72B900B3FD1A /* SearchPostCell.swift */,
+				625A842C24715FBA00C4AF2D /* SliderCell.swift */,
+				62D2FAF1247174AB003AB664 /* SaleCell.swift */,
+				62497C752473C318001CAD1D /* ContentCell.swift */,
+				62497C772473D7C6001CAD1D /* SaleCellCell.swift */,
+				62E5A1192475236400858821 /* ContentCellCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -385,8 +392,6 @@
 		5DBBFBD6214A99580037BFF6 = {
 			isa = PBXGroup;
 			children = (
-				627BE6462433882A00FC8696 /* motorcycle.svg */,
-				627BE6452433882A00FC8696 /* save_money.svg */,
 				622B47662354E034004AF62C /* Default-568h@2x.png */,
 				5DBBFBE1214A99580037BFF6 /* easyBazi */,
 				5DBBFBE0214A99580037BFF6 /* Products */,
@@ -398,7 +403,7 @@
 		5DBBFBE0214A99580037BFF6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5DBBFBDF214A99580037BFF6 /* easyBazi.app */,
+				5DBBFBDF214A99580037BFF6 /* Easy Bazi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				5D12D373214E5A5A00804F12 /* Controller */,
 				5DBBFBE2214A99580037BFF6 /* AppDelegate.swift */,
 				5DBBFBE9214A99580037BFF6 /* Assets.xcassets */,
+				629530C7247AD60000FA4B49 /* 1024.png */,
 				5DBBFBEE214A99580037BFF6 /* Info.plist */,
 				5D782E13217B1653007D01D8 /* DataModel.xcdatamodeld */,
 			);
@@ -440,9 +446,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5DBBFBDE214A99580037BFF6 /* easyBazi */ = {
+		5DBBFBDE214A99580037BFF6 /* Easy Bazi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5DBBFBF1214A99580037BFF6 /* Build configuration list for PBXNativeTarget "easyBazi" */;
+			buildConfigurationList = 5DBBFBF1214A99580037BFF6 /* Build configuration list for PBXNativeTarget "Easy Bazi" */;
 			buildPhases = (
 				4184C88BD850BB45CC924AC9 /* [CP] Check Pods Manifest.lock */,
 				5DBBFBDB214A99580037BFF6 /* Sources */,
@@ -454,9 +460,9 @@
 			);
 			dependencies = (
 			);
-			name = easyBazi;
+			name = "Easy Bazi";
 			productName = EziBazi2;
-			productReference = 5DBBFBDF214A99580037BFF6 /* easyBazi.app */;
+			productReference = 5DBBFBDF214A99580037BFF6 /* Easy Bazi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -475,7 +481,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5DBBFBDA214A99580037BFF6 /* Build configuration list for PBXProject "easyBazi" */;
+			buildConfigurationList = 5DBBFBDA214A99580037BFF6 /* Build configuration list for PBXProject "Easy Bazi" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -488,7 +494,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5DBBFBDE214A99580037BFF6 /* easyBazi */,
+				5DBBFBDE214A99580037BFF6 /* Easy Bazi */,
 			);
 		};
 /* End PBXProject section */
@@ -498,16 +504,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629530C8247AD60000FA4B49 /* 1024.png in Resources */,
 				6247E48422C811BB00EDCFF9 /* IRAN_Sans_Bold.ttf in Resources */,
 				5DC05178222FCC00002EE2F6 /* IRAN_Sans.ttf in Resources */,
+				62DBA0F8247AD313005E2197 /* Launch Screen.storyboard in Resources */,
 				5D1B6A63219CA8C600155BDC /* SanFranciscoDisplay-Medium.otf in Resources */,
-				627BE6482433882B00FC8696 /* motorcycle.svg in Resources */,
-				5DBBFBED214A99580037BFF6 /* LaunchScreen.storyboard in Resources */,
-				627BE6472433882B00FC8696 /* save_money.svg in Resources */,
 				5DBBFBEA214A99580037BFF6 /* Assets.xcassets in Resources */,
 				622B47672354E034004AF62C /* Default-568h@2x.png in Resources */,
 				5DBBFBE8214A99580037BFF6 /* Main.storyboard in Resources */,
-				5DE563C5216C9E6300636D13 /* spinnerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,17 +570,19 @@
 				62FB2FD0240FC930004B8B53 /* ResetPassword.swift in Sources */,
 				5DBBFBE5214A99580037BFF6 /* HomeViewController.swift in Sources */,
 				5D4ECE372168CBFA001A7DE6 /* SearchCell.swift in Sources */,
-				5DE563C4216C9E6300636D13 /* spinnerCell.swift in Sources */,
 				5D2A81792171F1B3006D2D24 /* GameDetailsCell.swift in Sources */,
+				625A842D24715FBA00C4AF2D /* SliderCell.swift in Sources */,
 				5D07C8F821B40812005F4D33 /* RentVC.swift in Sources */,
 				5D4055102188920F006ADE71 /* SupportVC.swift in Sources */,
 				5DF7AE7D2198B097004407F0 /* RentActivity.swift in Sources */,
 				5D2A817D21724546006D2D24 /* GetDataForSlider.swift in Sources */,
+				62D2FAF2247174AB003AB664 /* SaleCell.swift in Sources */,
 				5D348A67216F4BCC004CD001 /* GetDataForSaleVC.swift in Sources */,
 				62FB2FD2240FCED3004B8B53 /* NewPasswordViewController.swift in Sources */,
 				62BBB1A623D9AA7400277865 /* RenewalViewController.swift in Sources */,
 				62721DB12413AD6800B66AB0 /* Reckogning.swift in Sources */,
 				5D942AB32177256900EA96DC /* ProfileController.swift in Sources */,
+				62497C782473D7C6001CAD1D /* SaleCellCell.swift in Sources */,
 				5DEA3F0C221C2F2A0045E13E /* Custom Color.swift in Sources */,
 				5D0101252194630C00DEB2F4 /* NewMessage.swift in Sources */,
 				626ED4A424165F3900F3A9FB /* RentExtensionWithWallet.swift in Sources */,
@@ -606,6 +612,7 @@
 				5D8DBF79222E7AC8006D1CF3 /* CityCell.swift in Sources */,
 				5D6689CC2199B87200FA752E /* BuyActivity.swift in Sources */,
 				5D010123219460CB00DEB2F4 /* MessageSeen.swift in Sources */,
+				62497C762473C318001CAD1D /* ContentCell.swift in Sources */,
 				5DBBFBE3214A99580037BFF6 /* AppDelegate.swift in Sources */,
 				5DBE570122494C7700BFE4A5 /* ActivityMenu.swift in Sources */,
 				626ED4A224165BC100F3A9FB /* penalty.swift in Sources */,
@@ -636,6 +643,7 @@
 				626ED4A824166D4F00F3A9FB /* Discount.swift in Sources */,
 				5D70CB7B21513E22001D4C12 /* NewsCollectionViewCell.swift in Sources */,
 				5D4721C121A9B3F9005F9D6A /* Formatter.swift in Sources */,
+				62E5A11A2475236400858821 /* ContentCellCell.swift in Sources */,
 				62AA831C23C8D782004E6F6C /* Address.swift in Sources */,
 				5DEA3F07221C25EE0045E13E /* BottomList.swift in Sources */,
 				626ED4A624166B8D00F3A9FB /* RentExtensionWithEpay.swift in Sources */,
@@ -665,14 +673,6 @@
 				5DBBFBE7214A99580037BFF6 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5DBBFBEB214A99580037BFF6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5DBBFBEC214A99580037BFF6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -796,11 +796,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEBUG_ACTIVITY_MODE = "";
 				"DEBUG_ACTIVITY_MODE[arch=*]" = default;
 				DEVELOPMENT_TEAM = AA3L2V9T68;
 				INFOPLIST_FILE = "$(SRCROOT)/easyBazi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = sabalan.paydar.mohtasham.easyBazi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -816,10 +818,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEBUG_ACTIVITY_MODE = "";
 				DEVELOPMENT_TEAM = AA3L2V9T68;
 				INFOPLIST_FILE = "$(SRCROOT)/easyBazi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = sabalan.paydar.mohtasham.easyBazi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -831,7 +835,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5DBBFBDA214A99580037BFF6 /* Build configuration list for PBXProject "easyBazi" */ = {
+		5DBBFBDA214A99580037BFF6 /* Build configuration list for PBXProject "Easy Bazi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DBBFBEF214A99580037BFF6 /* Debug */,
@@ -840,7 +844,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5DBBFBF1214A99580037BFF6 /* Build configuration list for PBXNativeTarget "easyBazi" */ = {
+		5DBBFBF1214A99580037BFF6 /* Build configuration list for PBXNativeTarget "Easy Bazi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DBBFBF2214A99580037BFF6 /* Debug */,

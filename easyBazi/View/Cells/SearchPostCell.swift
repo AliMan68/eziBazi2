@@ -17,8 +17,14 @@ class SearchPostCell: baseCell {
                     }else{
                         postImage.image = UIImage(named:"notFound")
                     }
+                    //handle line spacing down there
+                    let attributedString = NSMutableAttributedString(string: post.title)
+                    let paragraphStyle = NSMutableParagraphStyle()
+                    paragraphStyle.lineSpacing = 6
+                    attributedString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
                     
-                    content.text = post.title
+                    content.attributedText = attributedString
+                    content.textAlignment = .right
                     date.text = (UIApplication.shared.delegate as! AppDelegate).dateConvertor(from: post.created_at)
                 }
             }
@@ -68,11 +74,10 @@ class SearchPostCell: baseCell {
         let content:UILabel = {
                   var label = UILabel()
                   label.translatesAutoresizingMaskIntoConstraints = false
-                  label.font = UIFont(name: "IRANSans", size: 12)
-                  label.textAlignment = .right
+                  label.font = UIFont(name: "IRANSans", size: 13)
+                  label.textAlignment = .center
                   label.textColor = .white
-                  label.numberOfLines = 0
-                  
+                  label.numberOfLines = 5
                   return label
               }()
             
@@ -130,7 +135,7 @@ class SearchPostCell: baseCell {
                 content.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
                 content.rightAnchor.constraint(equalTo: postImage.leftAnchor, constant: -8).isActive = true
                 content.leftAnchor.constraint(equalTo: leftAnchor, constant: 8).isActive = true
-                content.bottomAnchor.constraint(equalTo: postImage.bottomAnchor, constant: -4).isActive = true
+//                content.bottomAnchor.constraint(equalTo: postImage.bottomAnchor, constant: -4).isActive = true
             }
             fileprivate func configeView(){
                 addSubview(dateContainer)

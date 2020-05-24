@@ -19,7 +19,7 @@ class SearchShopCell: baseCell {
                            }
                 
                 
-                gameName.text = game.game_info.name
+                gameName.text = game.game_info.name!.uppercased()
                 
                 //extract genres here
                 if game.game_info.genres.count != 0{

@@ -32,6 +32,7 @@ class Discount {
         request.httpMethod = "Post"
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        print(token)
         request.setValue("Bearer \(token) ", forHTTPHeaderField: "Authorization")
         let requestBody = "code=\(discountCode)"
         request.httpBody = requestBody.data(using: .utf8)
