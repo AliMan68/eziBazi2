@@ -12,19 +12,17 @@ class SaleCellCell:baseCell{
     
     var game:Game!{
            didSet{
+            print("game photo : \(game.game_info.photos)")
             if game.game_info.photos.count != 0{
                    let url = URL(string:game.game_info.photos[0].url)
-                   gameImage.sd_setImage(with: url, placeholderImage:UIImage(named:"GOW"),completed: nil)
+                   gameImage.sd_setImage(with: url, placeholderImage:UIImage(named:"logo-1"),completed: nil)
                }else{
                    gameImage.image = UIImage(named:"notFound")
                }
             gameName.text = game.game_info.name?.uppercased()
                gamePrice.text = convertToPersian(inputStr: String(describing: Int(game.price).formattedWithSeparator)) + " تومان"
         }
-       }
-    
-    
-    
+       }  
     let gameImage:UIImageView = {
         let image = UIImage(named: "GOW")
         var iv = UIImageView(image: image)

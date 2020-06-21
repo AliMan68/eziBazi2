@@ -133,7 +133,31 @@ class ProfileController: UIViewController,UITextFieldDelegate,SFSafariViewContro
     @IBAction func forgetPassButton(_ sender: UIButton) {
         forgetPass.show()
     }
-               
+    
+    //handle direct to instagram staff
+    
+    @IBAction func instagramButton(_ sender: Any) {
+        _ = "instagram://user?username=easybazi.ir"
+//        let instagramUrl = NSURL(string: instagramHooks)
+//        if UIApplication.shared.canOpenURL(instagramUrl! as URL) {
+//            UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
+//        } else {
+//            print("Opening instagram in safari")
+          //redirect to safari because the user doesn't have Instagram
+            UIApplication.shared.open(NSURL(string: "http://instagram.com/easybazi.ir")! as URL, options: [:], completionHandler: nil)
+//        }
+        
+    }
+    
+// hnade telegram here
+    
+    @IBAction func telegramButton(_ sender: Any) {
+         let telegramHooks = "https://telegram.me/easybazi"
+         let telegramUrl = URL(string: telegramHooks)
+        UIApplication.shared.open(telegramUrl!, options: [:], completionHandler: nil)
+
+    }
+    
     let alternativeView:UIView = {
       var view = UIView()
         view.backgroundColor = UIColor(red: 14/255, green: 22/255, blue: 33/255, alpha: 1)

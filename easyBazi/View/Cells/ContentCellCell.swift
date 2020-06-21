@@ -15,7 +15,7 @@ class ContentCellCell:baseCell{
            didSet{
             if post.photos.count != 0{
                    let url = URL(string:post.photos[0].url)
-                   postImage.sd_setImage(with: url, placeholderImage:UIImage(named:"GOW"),completed: nil)
+                   postImage.sd_setImage(with: url, placeholderImage:UIImage(named:"logo-1"),completed: nil)
                }else{
                    postImage.image = UIImage(named:"notFound")
                }

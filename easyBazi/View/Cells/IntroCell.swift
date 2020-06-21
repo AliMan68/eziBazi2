@@ -13,7 +13,7 @@ class IntroCell: UICollectionViewCell {
     let webView:UIWebView = {
        let iv = UIWebView()
         iv.translatesAutoresizingMaskIntoConstraints = false
-        iv.backgroundColor = UIColor.backgroundThem
+        iv.backgroundColor = UIColor.clear
         iv.scrollView.isScrollEnabled = false
         return iv
     }()
@@ -28,7 +28,7 @@ class IntroCell: UICollectionViewCell {
     let topContainer:UIView = {
       let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.backgroundThem
+        view.backgroundColor = UIColor.white
         return view
     }()
     
@@ -71,7 +71,7 @@ class IntroCell: UICollectionViewCell {
         addSubview(explanation)
         setupTextView()
         // background theme
-        backgroundColor = UIColor.backgroundThem
+        backgroundColor = UIColor.easyBaziTheme
     }
 
     fileprivate func setupTextView(){

@@ -7,10 +7,15 @@
 //
 
 import Foundation
-struct GameObject: Decodable{
+struct GameArrayObject: Decodable{
     var status : Int
     var message:String
     var data:DataObject
+}
+struct GameObject: Decodable{
+    var status : Int
+    var message:String
+    var data:Game
 }
 struct DataObject: Decodable{
     var current_page:Int?

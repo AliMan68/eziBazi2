@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_easyBaziVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_easyBaziVersionString[];
+FOUNDATION_EXPORT double Pods_EasyBaziVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_EasyBaziVersionString[];
 

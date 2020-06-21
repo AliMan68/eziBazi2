@@ -18,7 +18,7 @@ class SwipingController: UICollectionViewController,UICollectionViewDelegateFlow
         btn.alpha = 0
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.titleLabel?.font = UIFont(name: "IRANSans", size: 15)
-        btn.setTitleColor(.gray, for: .normal)
+        btn.setTitleColor(.lightGray, for: .normal)
         btn.addTarget(self, action: #selector(handlePrev), for: .touchUpInside)
         return btn
     }()
@@ -27,7 +27,7 @@ class SwipingController: UICollectionViewController,UICollectionViewDelegateFlow
         btn.setTitle("بعدی", for: .normal)
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.titleLabel?.font = UIFont(name: "IRANSans", size: 15)
-        btn.setTitleColor(.easyBaziTheme, for: .normal)
+        btn.setTitleColor(.backgroundThem, for: .normal)
         btn.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
         return btn
     }()
@@ -104,15 +104,16 @@ class SwipingController: UICollectionViewController,UICollectionViewDelegateFlow
         collectionView?.backgroundColor = .clear
         collectionView?.showsHorizontalScrollIndicator = false
         collectionView?.register(IntroCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        collectionView?.backgroundColor = UIColor.backgroundThem
+        collectionView?.backgroundColor = UIColor.white
+        view.backgroundColor = .red
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
          do{
-            guard let path1 = Bundle.main.path(forResource: "motorcycle", ofType: "svg")else{ print("Error in reading path"); return}
+            guard let path1 = Bundle.main.path(forResource: "motorcycle", ofType: "svg")else{ print("Error in reading path 1"); return}
             contents1 = try String(contentsOfFile: path1, encoding: .utf8)
             baseUrl1 = URL(fileURLWithPath: path1)
-            guard let path2 = Bundle.main.path(forResource: "save_money", ofType: "svg")else{ print("Error in reading path"); return}
+            guard let path2 = Bundle.main.path(forResource: "save_money", ofType: "svg")else{ print("Error in reading path 2"); return}
             contents2 = try String(contentsOfFile: path2, encoding: .utf8)
             baseUrl2 = URL(fileURLWithPath: path2)
                 }
@@ -127,8 +128,6 @@ class SwipingController: UICollectionViewController,UICollectionViewDelegateFlow
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! IntroCell
         if indexPath.row == 0 {
-            print(cell.webViewWidth.isActive)
-            print(cell.imageViewWidth.isActive)
             cell.webViewWidth.isActive = false
             cell.imageViewWidth.isActive = true
             cell.title.text = "ایزی بازی"

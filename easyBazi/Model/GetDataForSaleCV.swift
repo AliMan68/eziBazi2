@@ -11,6 +11,7 @@ import UIKit
 class GetDataForSaleCV {
     static func getData(completion:@escaping (Array<Game>,Int)-> Void){
         let delegate = UIApplication.shared.delegate as! AppDelegate
+        
         let saleUrl:String = "\(delegate.url)/api/game-for-shop-index/14"
         var request = URLRequest(url: URL(string:saleUrl)!)
         request.httpMethod = "GET"
@@ -28,7 +29,7 @@ class GetDataForSaleCV {
                 print("response = \(String(describing: response))")
             }
             do{
-                let allData = try  JSONDecoder().decode(GameObject.self, from: data)
+                let allData = try  JSONDecoder().decode(GameArrayObject.self, from: data)
                 gameArray = allData.data.data
                 status = allData.status
                 DispatchQueue.main.async {

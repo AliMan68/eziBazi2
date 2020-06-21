@@ -166,5 +166,12 @@ class  ContentCell: baseCell,UICollectionViewDelegate,UICollectionViewDataSource
         return .init(width: cellWidth, height: frame.size.height - stackHeight - 16)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        let urlString = "https://www.easybazi.ir/blog/\(postsArray[indexPath.row].id)/\(postsArray[indexPath.row].title)"
+        let safariVC = SFSafariViewController(url: URL(string: urlString)!)
+        homeVC.present(safariVC, animated: true, completion: nil)
+    }
+    //url = https://www.easybazi.ir/blog/id/title
+    
     
 }

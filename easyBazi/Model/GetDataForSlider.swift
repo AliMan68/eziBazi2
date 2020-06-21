@@ -16,7 +16,7 @@ struct SliderObject: Decodable{
 struct SliderDataObject:Decodable{
     var id:Int?
     var content:String
-    var on_click:String
+    var on_click:String?
     var title:String
     var photos:[photo]
 }

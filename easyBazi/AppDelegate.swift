@@ -50,16 +50,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //add intro pages to app here
 //
-//        let defaults = UserDefaults.standard
-//        if defaults.object(forKey: "isFirstTime") == nil {
-//            print("Intro vc showing now...")
-//            defaults.set("No", forKey:"isFirstTime")
-//                window = UIWindow()
-//                window?.makeKeyAndVisible()
-//                let layout = UICollectionViewFlowLayout()
-//                layout.scrollDirection = .horizontal
-//                window?.rootViewController = SwipingController(collectionViewLayout:layout)
-//          }
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: "isFirstTime") == nil {
+            print("Intro vc showing now...")
+            defaults.set("No", forKey:"isFirstTime")
+                window = UIWindow()
+                window?.makeKeyAndVisible()
+                let layout = UICollectionViewFlowLayout()
+                layout.scrollDirection = .horizontal
+                window?.rootViewController = SwipingController(collectionViewLayout:layout)
+          }
         
         return true
     }

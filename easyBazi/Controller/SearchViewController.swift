@@ -30,7 +30,7 @@ class SearchViewController: UIViewController,SFSafariViewControllerDelegate {
     var rentTypes:[rentType] = []
     var message:String = ""
     var index:IndexPath!
-    var searchType:String = "rent"
+    var searchType:String = "shop"
     var activityIndicatorView:UIActivityIndicatorView!
     var isEnoughCharacter = false
     let dispatchQueue = DispatchQueue(label: "Dispatch Queue", attributes: [], target: nil)
@@ -240,6 +240,7 @@ extension SearchViewController:UICollectionViewDataSource,UICollectionViewDelega
             destination?.isSecondHand = true
             navigationController?.pushViewController(destination!, animated: true)
         }else if searchType == "rent"{
+            print("we are in RENT")
             destination?.game = searachResult[indexPath.row]
             destination?.rentTypes = rentTypes
             destination?.isForRent = true

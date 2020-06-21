@@ -13,6 +13,7 @@ class SaleCell: baseCell,UICollectionViewDelegate,UICollectionViewDataSource,UIC
 
 
     let cellWidth:CGFloat = 125.0
+    let cellHeight:CGFloat = 185.0
     let stackHeight:CGFloat = 30.0
     var saleGameArray = [Game]()
     let cellId = "saleCell"
@@ -71,6 +72,7 @@ class SaleCell: baseCell,UICollectionViewDelegate,UICollectionViewDataSource,UIC
         var cvLayout = UICollectionViewFlowLayout()
         var cv = UICollectionView(frame: .zero, collectionViewLayout: cvLayout)
         cvLayout.scrollDirection = .horizontal
+        cvLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         cv.backgroundColor = UIColor.backgroundThem
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.dataSource = self
@@ -164,7 +166,7 @@ class SaleCell: baseCell,UICollectionViewDelegate,UICollectionViewDataSource,UIC
     
     //slider delegate
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: cellWidth, height: frame.size.height - stackHeight - 16)
+        return .init(width: cellWidth, height: cellHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

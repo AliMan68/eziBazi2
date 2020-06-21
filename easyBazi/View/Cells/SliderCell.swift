@@ -9,6 +9,7 @@
 import UIKit
 import FSPagerView
 import SafariServices
+import SVProgressHUD
 
 class SliderCell: baseCell,FSPagerViewDelegate,FSPagerViewDataSource,UICollectionViewDelegateFlowLayout {
     
@@ -90,10 +91,7 @@ class SliderCell: baseCell,FSPagerViewDelegate,FSPagerViewDataSource,UICollectio
             }
         }
     }
-    
-    
-    
-    
+
     //slider data source
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         sliderArray.count
@@ -101,9 +99,10 @@ class SliderCell: baseCell,FSPagerViewDelegate,FSPagerViewDataSource,UICollectio
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        
         let imageUrl = URL(string:sliderArray[index].photos[0].url)
         if let url = imageUrl {
-            cell.imageView?.sd_setImage(with: url , placeholderImage: UIImage(named:"GOW"), completed: nil)
+            cell.imageView?.sd_setImage(with: url , placeholderImage: UIImage(named:"logo-1"), completed: nil)
         }else{
             cell.imageView?.image = UIImage(named:"notFound")
         }
@@ -124,8 +123,47 @@ class SliderCell: baseCell,FSPagerViewDelegate,FSPagerViewDataSource,UICollectio
 //        MOVE TO ANOTHER VIEW WHEN ITEM IN SLIDER CLICKED
     //        let destination = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "webView") as! WebViewController
     //        navigationController?.pushViewController(destination, animated: true)
-            let safariVC = SFSafariViewController(url: URL(string: "https://www.easyBazi.ir/")!)
+        guard let onClickeContent = sliderArray[index].on_click else{
+        
+            return
+        }
+        //present sale game here
+        if onClickeContent.contains("INAPP_SHOP"), let idx = onClickeContent.lastIndex(of: ":"){
+            SVProgressHUD.setDefaultMaskType(.black)
+            SVProgressHUD.show()
+            let index =  onClickeContent.index(after: idx)
+            let id = onClickeContent.suffix(from: index)
+            GetSinglrGame.getGame(for: String(id)) { (game, status, message) in
+               if status == 1 {
+                   let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                   let destination = storyboard.instantiateViewController(withIdentifier: "gameDetails") as? GameDetails
+                   destination?.game = game
+                   destination?.isForRent = false
+                   destination?.isSecondHand = false
+                   self.homeVC.navigationController?.pushViewController(destination!, animated: true)
+                   SVProgressHUD.dismiss(withDelay: 1)
+
+                    
+                    
+                }else{
+                    print("Error in slider game object")
+                    SVProgressHUD.show(withStatus:message )
+                    SVProgressHUD.dismiss(withDelay: 3)
+                }
+            }
+
+//present rent game here
+        }else if onClickeContent.contains("INAPP_RENT"), let idx = onClickeContent.lastIndex(of: ":"){
+            let index =  onClickeContent.index(after: idx)
+            let id = onClickeContent.suffix(from: index)
+                    
+        }else if onClickeContent != ""{
+            let safariVC = SFSafariViewController(url: URL(string: onClickeContent)!)
             homeVC.present(safariVC, animated: true, completion: nil)
+        }
+        
+        
+        
         }
         //  CHANGE PAGE CONTROLLER CURRENT STATE
     

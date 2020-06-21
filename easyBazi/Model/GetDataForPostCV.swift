@@ -25,6 +25,7 @@ struct Post:Decodable {
     var content:String
     var photos:[photo]
     var created_at:String
+    var url:String?
 }
 class GetDataForPostCV {
     static func getData(completion:@escaping (Array<Post>,Int)-> Void){

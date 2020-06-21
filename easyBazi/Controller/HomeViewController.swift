@@ -442,6 +442,9 @@ class HomeViewController: UIViewController,UICollectionViewDataSource,UICollecti
 //        }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.row == 1{
+            return CGSize(width: view.frame.size.width, height: 230)
+        }
         return CGSize(width: view.frame.size.width, height: view.frame.size.height / 3)
     }
     

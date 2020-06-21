@@ -25,7 +25,7 @@ class GetDataForRentCV {
                 print("response = \(String(describing: response))")
             }
             do{
-                let allData = try  JSONDecoder().decode(GameObject.self, from: data)
+                let allData = try  JSONDecoder().decode(GameArrayObject.self, from: data)
                 gameArray = allData.data.data
                 status = allData.status
                 DispatchQueue.main.async {

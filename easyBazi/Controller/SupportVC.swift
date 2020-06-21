@@ -40,12 +40,29 @@ class SupportVC: UIViewController,UITextFieldDelegate {
                             let messageContent = Messagee(text: self.inputTxt.text!, is_user_sent: 1, is_seen: 1, created_at:createAt)
                 
                             let indexpath = IndexPath(row: self.chatMessages[self.chatMessages.count - 1].count - 1, section:  self.chatMessages.count - 1  )
-                            self.chatMessages[self.chatMessages.count - 1].insert(messageContent, at: 0)
-                            self.tableView.beginUpdates()
-                            self.tableView.insertRows(at: [indexpath], with: .top)
-                            self.tableView.endUpdates()
-                            self.scrollToBottom()
+                            let lasteMessageCreatedAt = self.chatMessages[self.chatMessages.count - 1].last?.created_at
                             
+                            //compare last and new message creation date
+                            let lastMessageidx = lasteMessageCreatedAt!.index(lasteMessageCreatedAt!.startIndex, offsetBy: 10)
+                            let lastMessageString =  String(lasteMessageCreatedAt![...lastMessageidx])
+                            
+                            let newMessageidx = createAt.index(createAt.startIndex, offsetBy: 10)
+                            let newtMessageString = String(createAt[...newMessageidx])
+                            
+                            if lastMessageString != newtMessageString{
+                                print("dates are not same")
+                                self.chatMessages.append([messageContent])
+//                                self.tableView.beginUpdates()
+//                                self.tableView.insertSections(IndexSet(integer: self.chatMessages.count + 1), with: UITableViewRowAnimation.bottom)
+                                self.tableView.reloadData()
+                            }else{
+                                print("dates are same")
+                                self.chatMessages[self.chatMessages.count - 1].insert(messageContent, at: 0)
+                                self.tableView.beginUpdates()
+                                self.tableView.insertRows(at: [indexpath], with: .bottom)
+                                self.tableView.endUpdates()
+                            }
+                            self.scrollToBottom()
                             self.inputTxt.text = ""
                             UIView.animate(withDuration: 0.5) {
                                 self.inputTxt.transform = .identity
@@ -57,8 +74,7 @@ class SupportVC: UIViewController,UITextFieldDelegate {
                                 self.noMessage.isHidden = false
                             }
                             self.removeCoverView()
-                            let alert = UIAlertController(title: "توجه ", message: "خطایی رخ داده.پیام خود را مجددا ارسال کنید",
-                                                          preferredStyle: UIAlertControllerStyle.alert)
+                            let alert = UIAlertController(title: "توجه ", message: "خطایی رخ داده.پیام خود را مجددا ارسال کنید",preferredStyle:UIAlertControllerStyle.alert)
                             alert.addAction(UIAlertAction(title: "اوکی", style: UIAlertActionStyle.default, handler: nil))
                             self.present(alert, animated: true, completion: nil)
                         }
@@ -75,6 +91,7 @@ class SupportVC: UIViewController,UITextFieldDelegate {
     var messageCount = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        inputTxt.autocorrectionType = .no
         noMessage.textColor = .white
         self.inputTxt.delegate = self
         tableView.backgroundColor = UIColor.backgroundThem
@@ -84,7 +101,6 @@ class SupportVC: UIViewController,UITextFieldDelegate {
         backgroundImage.alpha = 0.7
         backgroundImage.frame.size = CGSize(width: view.frame.size.width - 100, height: view.frame.size.height * 0.4 )
         inputTxt.isUserInteractionEnabled = false
-       
         inputTxt.layer.cornerRadius = 5
         inputTxt.keyboardType = UIKeyboardType.default
         let image = UIImageView(image: UIImage(named: "support.png"))
@@ -236,15 +252,21 @@ class SupportVC: UIViewController,UITextFieldDelegate {
             print("Fetching Seccessfully")
         }catch{
             print("Fetching Error")
-            
         }
         return token
     }
      @objc func keyboardWillShown(notification: NSNotification) {
         let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         
-        let keyboardHeight = keyboardSize?.height
+        var keyboardHeight = keyboardSize?.height
+        if #available(iOS 11.0, *){
+            let bottomInset:CGFloat = view.safeAreaInsets.bottom
+
+            keyboardHeight! -= bottomInset
+        }
+       
         self.textFieldBottom.constant = -(keyboardHeight!)
+       
         self.sendButtonBottomConstraint.constant = -(keyboardHeight!)
         
         UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
@@ -384,7 +406,6 @@ extension SupportVC:UITableViewDataSource,UITableViewDelegate{
         //Helper method
         
         fileprivate func addCoverView(){
-        
             coverView = UIView()
             coverView.backgroundColor = UIColor(white: 0.5, alpha: 0.4)
             coverView.alpha = 0

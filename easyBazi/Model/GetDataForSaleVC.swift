@@ -26,7 +26,7 @@ class GetDataForSaleVC {
                 print("response = \(String(describing: response))")
             }
             do{
-                let allData = try  JSONDecoder().decode(GameObject.self, from: data)
+                let allData = try  JSONDecoder().decode(GameArrayObject.self, from: data)
                 gameArray = allData.data.data
                 nextPageUrl = allData.data.next_page_url
                 status = allData.status

@@ -1,5 +1,5 @@
-module Pods_easyBazi {
-  umbrella header "Pods-easyBazi-umbrella.h"
+module Pods_EasyBazi {
+  umbrella header "Pods-EasyBazi-umbrella.h"
 
   export *
   module * { export * }
